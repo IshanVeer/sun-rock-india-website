@@ -18,10 +18,10 @@ export default function Home() {
             top-quality products to clients worldwide.{" "}
           </p>
           <div className="flex gap-8">
-            <div className="bg-light-800 font-medium inline-block px-4 py-2 rounded-lg">
+            <div className="bg-light-800 transition duration-150 hover:bg-light-700 font-medium inline-block px-4 py-2 rounded-lg">
               <Link href="/contact">Contact Us</Link>
             </div>
-            <div className="flex font-medium items-center gap-3 text-light-900">
+            <div className="flex hover:border-b-2 transition duration-150 border-light-900 font-medium items-center gap-3 text-light-900">
               <Link href="/products">See our Products</Link>
               <Image
                 src="/assets/icons/chevron-right.svg"
