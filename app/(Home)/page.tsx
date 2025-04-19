@@ -96,6 +96,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Why choose us */}
+      <section className="px-28 bg-[#E7EBED] py-20">
+        <div>
+          <div>
+            <h2 className="h2-bold">Why Choose Us ?</h2>
+          </div>
+        </div>
+        <div></div>
+      </section>
     </div>
   );
 }
