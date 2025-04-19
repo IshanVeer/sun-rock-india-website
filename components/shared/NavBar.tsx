@@ -12,7 +12,8 @@ const NavBar = () => {
   return (
     <nav className="absolute text-light-900 px-28 w-full z-10 justify-between my-8 flex">
       {/* logo */}
-      <div className="flex items-center gap-4">
+
+      <Link className="flex items-center gap-4" href="/">
         <Image
           src="/assets/images/pexels-romanp-17845.jpg"
           alt="logo"
@@ -21,7 +22,8 @@ const NavBar = () => {
           className="w-10 h-10 rounded-[100%] object-cover"
         />
         <h2 className=" h3-bold">SUN INDIA ROCKS</h2>
-      </div>
+      </Link>
+
       {/* navbar */}
       <ul className="flex border-b gap-2 border-neutral-500">
         {navLinks.map((link) => (
