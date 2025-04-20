@@ -36,10 +36,34 @@ export const achievements = [
   },
 ];
 export const partnersLogo = [
-  { imgUrl: "/assets/images/pexels-romanp-17845.jpg" },
-  { imgUrl: "/assets/images/pexels-romanp-17845.jpg" },
-  { imgUrl: "/assets/images/pexels-romanp-17845.jpg" },
-  { imgUrl: "/assets/images/pexels-romanp-17845.jpg" },
-  { imgUrl: "/assets/images/pexels-romanp-17845.jpg" },
-  { imgUrl: "/assets/images/pexels-romanp-17845.jpg" },
+  { id: 1, imgUrl: "/assets/images/logoipsum-283 2.png" },
+  { id: 2, imgUrl: "/assets/images/logoipsum-332 2.png" },
+  { id: 3, imgUrl: "/assets/images/logoipsum-338 2.png" },
+  { id: 4, imgUrl: "/assets/images/logoipsum-344 2.png" },
+  { id: 5, imgUrl: "/assets/images/logoipsum-345 2.png" },
+  { id: 6, imgUrl: "/assets/images/logoipsum-348 2.png" },
+];
+
+export const choosingQualities = [
+  {
+    id: 1,
+    title: "Integrity",
+    description:
+      "We provide premium North and South Indian granite in diverse finishes and sizes, tailored to meet architectural needs with precision and excellence.",
+    imgUrl: "/assets/images/integrity.png",
+  },
+  {
+    id: 2,
+    title: "Uniqueness",
+    description:
+      "From sourcing to delivery, our innovative processes and quality inspection ensure we meet the precise needs of granite buyers, setting us apart as a leading.",
+    imgUrl: "/assets/images/uniqueness.jpeg",
+  },
+  {
+    id: 3,
+    title: "Quality",
+    description:
+      "We provide premium North and South Indian granite in diverse finishes and sizes, tailored to meet architectural needs with precision and excellence.",
+    imgUrl: "/assets/images/quality.jpeg",
+  },
 ];

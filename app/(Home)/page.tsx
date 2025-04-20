@@ -1,4 +1,4 @@
-import { achievements, partnersLogo } from "@/constants";
+import { achievements, choosingQualities, partnersLogo } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -79,7 +79,10 @@ export default function Home() {
           <div className="w-1/2 flex flex-col text-center gap-3">
             <ul className=" grid gap-4 grid-cols-3">
               {partnersLogo.map((logo) => (
-                <li className="px-12 rounded-2xl py-4 bg-[#E7EBED] " key={1}>
+                <li
+                  className="px-12 rounded-2xl py-4 bg-[#E7EBED] "
+                  key={logo.id}
+                >
                   <Image
                     className="w-full object-cover"
                     src={logo.imgUrl}
@@ -98,12 +101,54 @@ export default function Home() {
       </section>
       {/* Why choose us */}
       <section className="px-28 bg-[#E7EBED] py-20">
-        <div>
-          <div>
+        <div className="flex justify-between">
+          {/* title section */}
+          <div className="flex flex-col gap-6">
             <h2 className="h2-bold">Why Choose Us ?</h2>
+            <div className="flex items-center text-xs gap-2 font-semibold text-[#047C7C]">
+              <div className="p-2 inline-block bg-[#047C7C] rounded-[100%]">
+                <Image
+                  className="bg-[##047C7C] rounded-[100%]"
+                  src="/assets/icons/chevron-right.svg"
+                  alt="icon"
+                  height={20}
+                  width={20}
+                />
+              </div>
+              <p>Know More</p>
+            </div>
+          </div>
+          {/* paragraph section */}
+          <div className="w-3/5">
+            <p className="text-light-600 text-md leading-7">
+              With decades of expertise, a global footprint spanning [X]
+              countries, and a steadfast commitment to quality, we deliver
+              unparalleled granite solutions tailored to your needs. Our
+              certified processes, innovative craftsmanship, and reliable
+              logistics make us the trusted partner for projects of any scale.
+            </p>
           </div>
         </div>
-        <div></div>
+
+        <ul className="flex my-16 items-center gap-4">
+          {choosingQualities.map((quality) => (
+            <li className="p-2 rounded-lg bg-light-900 w-full" key={quality.id}>
+              <Image
+                className="w-full h-52 rounded-lg object-cover"
+                src={quality.imgUrl}
+                alt={quality.title}
+                width={200}
+                height={200}
+              />
+              <h2 className="h3-bold text-dark-100 my-4 mx-2">
+                {quality.title}
+              </h2>
+              <p className="paragraph-regular text-light-600 mx-2 mb-4">
+                {quality.description}
+              </p>
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   );
