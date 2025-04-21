@@ -7,7 +7,6 @@ import React from "react";
 
 const NavBar = () => {
   const pathname = usePathname();
-  console.log(pathname);
 
   return (
     <nav className="absolute text-light-900 px-28 w-full z-10 justify-between my-8 flex">

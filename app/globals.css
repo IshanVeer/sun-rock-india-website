@@ -37,7 +37,7 @@
   }
 
   .base-regular {
-    @apply text-[16px] font-normal leading-[100%];
+    @apply text-[16px] font-normal;
   }
   .paragraph-regular {
     @apply text-[14px] font-normal;
@@ -46,7 +46,7 @@
     @apply text-[12px] font-bold leading-[15px];
   }
   .body-regular {
-    @apply text-[12px] font-normal leading-[100%];
+    @apply text-[12px] font-normal;
   }
   .text-dark100_light900 {
     @apply text-dark-100 dark:text-light-900;

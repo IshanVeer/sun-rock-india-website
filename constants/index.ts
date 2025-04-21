@@ -67,3 +67,60 @@ export const choosingQualities = [
     imgUrl: "/assets/images/quality.jpeg",
   },
 ];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Name Surname",
+    designation: "designation",
+    description:
+      "Exceptional quality and service! The granite was delivered on time and exceeded our expectations in every way. Highly recommend!",
+  },
+  {
+    id: 2,
+    name: "Name Surname",
+    designation: "designation",
+    description:
+      "Exceptional quality and service! The granite was delivered on time and exceeded our expectations in every way. Highly recommend!",
+  },
+  {
+    id: 3,
+    name: "Name Surname",
+    designation: "designation",
+    description:
+      "Exceptional quality and service! The granite was delivered on time and exceeded our expectations in every way. Highly recommend!",
+  },
+];
+
+export const socialLinks = [
+  {
+    id: 1,
+    route: "https://www.facebook.com/",
+    imrUrl: "/assets/icons/facebook.svg",
+    label: "facebook",
+  },
+  {
+    id: 2,
+    route: "https://www.youtube.com/",
+    imrUrl: "/assets/icons/youtube.svg",
+    label: "youtube",
+  },
+  {
+    id: 3,
+    route: "https://www.instagram.com/",
+    imrUrl: "/assets/icons/instagram.svg",
+    label: "instagram",
+  },
+  {
+    id: 4,
+    route: "https://www.twitter.com/",
+    imrUrl: "/assets/icons/twitter.svg",
+    label: "twitter",
+  },
+  {
+    id: 5,
+    route: "https://www.whatsapp.com/",
+    imrUrl: "/assets/icons/whatsapp.svg",
+    label: "whatsapp",
+  },
+];

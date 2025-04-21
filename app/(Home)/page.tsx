@@ -1,4 +1,9 @@
-import { achievements, choosingQualities, partnersLogo } from "@/constants";
+import {
+  achievements,
+  choosingQualities,
+  partnersLogo,
+  testimonials,
+} from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -149,6 +154,67 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </section>
+      {/* client section */}
+      <section className="px-28 bg-light-900 py-20">
+        {/* map */}
+        <div className="flex items-center">
+          {/* heading container*/}
+          <div className="w-1/4">
+            <h2 className="h2-bold my-8 text-dark-100">
+              Our Clients Across the World
+            </h2>
+            <div className="flex my-4 items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
+              <h3 className="text-[48px] font-semibold text-dark-100">400+</h3>
+              <p className="font-medium text-light-600">Clients Worldwide</p>
+            </div>
+            <div className="flex my-4  items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
+              <h3 className="text-[48px] font-semibold text-dark-100">2000+</h3>
+              <p className="font-medium text-light-600">Satisfied Clients</p>
+            </div>
+          </div>
+
+          {/* map container */}
+          <div className="w-3/4">
+            <Image
+              className="w-full"
+              src="/assets/images/map.jpeg"
+              alt="map"
+              width={600}
+              height={600}
+            />
+          </div>
+        </div>
+        {/* testimonials */}
+        <div>
+          <div className="flex items-center gap-24">
+            <h2 className="w-2/5 h2-bold my-8 text-dark-100">
+              What our Clients Say?
+            </h2>
+            <p className="text-light-600 w-3/4">
+              Our clients are at the heart of everything we do, and their
+              feedback speaks volumes about our commitment to excellence. Having
+              served numerous customers globally, we are proud to showcase their
+              reviews, highlighting our quality, reliability, and exceptional
+              service in granite manufacturing and export.
+            </p>
+          </div>
+          <ul className="flex gap-4">
+            {testimonials.map((testimonial) => (
+              <li className="bg-[#E7EBED] rounded-lg p-6 " key={testimonial.id}>
+                <h3 className="text-[20px] font-bold text-dark-100">
+                  {testimonial.name}
+                </h3>
+                <p className="text-[14px] font-medium text-light-600">
+                  {testimonial.designation}
+                </p>
+                <p className="base-regular text-light-600 my-4 leading-6">
+                  {testimonial.description}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </div>
   );
