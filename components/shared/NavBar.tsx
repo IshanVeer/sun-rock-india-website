@@ -9,7 +9,7 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="absolute text-light-900 px-28 w-full z-10 justify-between my-8 flex">
+    <nav className="absolute max-md:hidden text-light-900 px-28 w-full z-10 justify-between my-8 flex">
       {/* logo */}
 
       <Link className="flex items-center gap-4" href="/">
@@ -20,7 +20,7 @@ const NavBar = () => {
           height={40}
           className="w-10 h-10 rounded-[100%] object-cover"
         />
-        <h2 className=" h3-bold">SUN INDIA ROCKS</h2>
+        <h2 className=" h3-bold max-lg:h4-bold">SUN INDIA ROCKS</h2>
       </Link>
 
       {/* navbar */}
@@ -29,7 +29,7 @@ const NavBar = () => {
           <li
             className={`${
               pathname === link.route ? "border-b-2 border-light-900" : ""
-            } px-8   hover:border-b-2 hover:border-light-900 `}
+            } px-8 max-xl:px-2    hover:border-b-2 hover:border-light-900 `}
             key={link.route}
           >
             <Link href={link.route}>{link.label}</Link>
