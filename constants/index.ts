@@ -211,3 +211,22 @@ export const manufacturingExcellence = [
     imgUrl: "/assets/images/manufacturing-6.png",
   },
 ];
+export const buildData = [
+  { id: 1, label: "Height", value: "Above 2 feet & below 7 feet" },
+  { id: 2, label: "Length", value: "Above 2 Feet & Below 12 Feet" },
+  { id: 3, label: "Form", value: "Slabs & Tiles" },
+  { id: 4, label: "Design", value: "Flowers, Waves, Dotted, Lines & Random" },
+  { id: 5, label: "Packing", value: "Stands & Care" },
+  { id: 6, label: "Finish", value: "Polished, Flamed" },
+  { id: 7, label: "Side Finish", value: "Full Round, One Side, Flat & Raw" },
+];
+
+export const productData = [
+  {
+    id: 1,
+    name: "river white",
+    description:
+      "River White Granite resembles a flowing river with soft white tones and black granule-like spots, creating a natural, dynamic pattern. Its unique aesthetic and strength make it perfect for countertops, flooring, and statement pieces.",
+    imgUrl: "/assets/images/river-white.png",
+  },
+];
