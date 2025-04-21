@@ -175,8 +175,8 @@ const Page = () => {
         </div>
       </section>
       {/* manufacturing section */}
-      <section className="px-20 md:px-28 items-center bg-[#E7EBED] py-20">
-        <h2 className="h2-bold   my-4 col-span-2  text-dark-100 md:hidden">
+      <section className="px-20 md:px-28 items-center bg-[#E7EBED] py-28">
+        <h2 className="h2-bold  my-4 col-span-2  text-dark-100 md:hidden">
           Excellence in Manufacturing & Export
         </h2>
         <ul className="grid grid-cols-4 gap-4 max-md:grid-cols-2 ">
