@@ -65,7 +65,7 @@ const Page = () => {
                   height={50}
                   width={50}
                 />
-                <h3 className="text-[20px] font-bold text-dark-100">
+                <h3 className="text-[20px] my-3 font-bold text-dark-100">
                   {testimonial.name}
                 </h3>
 
@@ -75,6 +75,65 @@ const Page = () => {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+      {/* journey */}
+      <section className="px-20 md:px-28 bg-[#E7EBED] py-20">
+        <div className="flex items-center gap-20 ">
+          {/* content */}
+          <div className="w-3/5">
+            <h2 className=" h2-bold  mb-8 text-dark-100">
+              Journey Behind Our Success
+            </h2>
+            <p className="text-light-600 ">
+              Founded in 2000 as a modest granite tile company, Sun India Rocks
+              has evolved into a global leader in granite solutions. Over two
+              decades, we&apos;ve expanded to eight state-of-the-art factories,
+              setting industry benchmarks with our commitment to quality and
+              innovation. Now, serving over 120 clients across 15+ countries, we
+              continue to be a trusted supplier, delivering the finest granite
+              with precision and passion. Join us as we redefine excellence in
+              the granite industry.
+            </p>
+          </div>
+          {/* image gallery */}
+          <div className="grid gap-2 aspect-square grid-cols-3 w-2/5 h-full">
+            <Image
+              className="col-span-2 rounded-xl object-cover row-span-2 h-full w-full"
+              src="/assets/images/journey-1.jpeg"
+              alt="gallery-image-1"
+              width={500}
+              height={500}
+            />
+            <Image
+              className="object-cover h-full rounded-xl w-full"
+              src="/assets/images/journey-2.jpeg"
+              alt="gallery-image-2"
+              width={500}
+              height={500}
+            />
+            <Image
+              className="row-span-2  rounded-xl object-cover h-full w-full"
+              src="/assets/images/journey-3.jpeg"
+              alt="gallery-image-3"
+              width={500}
+              height={500}
+            />
+            <Image
+              className="w-full rounded-xl h-full object-cover"
+              src="/assets/images/journey-4.jpeg"
+              alt="gallery-image-4"
+              width={500}
+              height={500}
+            />
+            <Image
+              className="object-cover h-full rounded-xl  w-full"
+              src="/assets/images/journey-5.jpeg"
+              alt="gallery-image-5"
+              width={500}
+              height={500}
+            />
+          </div>
         </div>
       </section>
     </div>
