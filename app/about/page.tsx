@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { excellence } from "@/constants";
+import { excellence, stepsToExcellence } from "@/constants";
 
 const Page = () => {
   return (
@@ -79,9 +79,9 @@ const Page = () => {
       </section>
       {/* journey */}
       <section className="px-20 md:px-28 bg-[#E7EBED] py-20">
-        <div className="flex items-center gap-20 ">
+        <div className="md:flex items-center gap-20 ">
           {/* content */}
-          <div className="w-3/5">
+          <div className="md:w-3/5">
             <h2 className=" h2-bold  mb-8 text-dark-100">
               Journey Behind Our Success
             </h2>
@@ -97,7 +97,7 @@ const Page = () => {
             </p>
           </div>
           {/* image gallery */}
-          <div className="grid gap-2 aspect-square grid-cols-3 w-2/5 h-full">
+          <div className="grid gap-2 aspect-square grid-cols-3 md:w-2/5 h-full max-md:mt-6">
             <Image
               className="col-span-2 rounded-xl object-cover row-span-2 h-full w-full"
               src="/assets/images/journey-1.jpeg"
@@ -134,6 +134,40 @@ const Page = () => {
               height={500}
             />
           </div>
+        </div>
+      </section>
+      {/* steps to excellence */}
+      <section className="px-20 md:px-28 bg-light-900 py-20">
+        <div className="md:flex items-center gap-20 justify-between">
+          <div className="md:w-1/3">
+            <h2 className="h2-bold text-dark-100">Our 4 Steps to Excellence</h2>
+            <p className="my-4 text-light-600">
+              Our four-step approach to business excellence ensures we
+              consistently deliver high-quality granite solutions. By focusing
+              on innovation, quality, efficiency, and customer satisfaction, we
+              strive to exceed expectations at every stage.
+            </p>
+          </div>
+
+          <ul className="md:w-2/3 md:grid grid-cols-2 max-md:mt-8  gap-4">
+            {stepsToExcellence.map((testimonial) => (
+              <li className=" max-md:my-4  " key={testimonial.id}>
+                <Image
+                  src={testimonial.imgUrl}
+                  alt={testimonial.name}
+                  height={50}
+                  width={50}
+                />
+                <h3 className="text-[20px] my-3 font-bold text-dark-100">
+                  {testimonial.name}
+                </h3>
+
+                <p className="base-regular text-light-600 my-4 leading-6">
+                  {testimonial.description}
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </div>

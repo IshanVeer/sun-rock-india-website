@@ -148,3 +148,34 @@ export const excellence = [
       "Excellence is central to Sun India Rocks. Driven by quality, integrity, and transparency, we consistently surpass expectations. Our experienced team and industry accolades reinforce our position as a leader in granite solutions, creating exceptional value for our clients and employees.",
   },
 ];
+
+export const stepsToExcellence = [
+  {
+    id: 1,
+    name: "Manufacturing",
+    imgUrl: "/assets/icons/eye.png",
+    description:
+      "At Sun India Rocks, our vision is to lead the granite industry with innovation, quality, and elegance. We aspire to create spaces where ",
+  },
+  {
+    id: 2,
+    name: "Quality",
+    imgUrl: "/assets/icons/excellence.png",
+    description:
+      "At Sun India Rocks, our vision is to lead the granite industry with innovation, quality, and elegance. We aspire to create spaces where ",
+  },
+  {
+    id: 3,
+    name: "packing",
+    imgUrl: "/assets/icons/eye.png",
+    description:
+      "At Sun India Rocks, our vision is to lead the granite industry with innovation, quality, and elegance. We aspire to create spaces where ",
+  },
+  {
+    id: 4,
+    name: "Delivery",
+    imgUrl: "/assets/icons/excellence.png",
+    description:
+      "At Sun India Rocks, our vision is to lead the granite industry with innovation, quality, and elegance. We aspire to create spaces where ",
+  },
+];
