@@ -12,14 +12,14 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <section
-        className="object-cover px-28 h-[650px]"
+        className="object-cover px-20 md:px-28  h-[650px]"
         style={{ backgroundImage: "url('/assets/images/hero-image.png')" }}
       >
-        <div className="pt-48 w-[700px]">
+        <div className="pt-48 w-[700px] max-md:w-[580px]">
           <h1 className=" text-light-900 h1-bold">
             Sun India Rocks is a Pioneering Company in
           </h1>
-          <p className="text-[18px] py-8 w-[640px] text-light-800">
+          <p className="text-[18px] py-8 w-[640px] max-md:w-[520px] text-light-800">
             We specialize in granite manufacturing and export, delivering
             top-quality products to clients worldwide.{" "}
           </p>
@@ -40,16 +40,19 @@ export default function Home() {
         </div>
       </section>
       {/* Achievements Section */}
-      <section className="px-28 bg-[#E7EBED] py-20">
-        <ul className="grid grid-cols-3 gap-12">
+      <section className="px-20 md:px-28 bg-[#E7EBED] py-20">
+        <ul className="grid max-md:grid-cols-2 max-md:gap-8 grid-cols-3 gap-12">
           {achievements.map((achievement) => (
-            <li className="flex items-center gap-4" key={achievement.label}>
+            <li
+              className="flex items-center max-md:items-start gap-4"
+              key={achievement.label}
+            >
               <Image
                 src="/assets/icons/medal.svg"
                 alt="medals"
                 height={40}
                 width={40}
-                className="w-16"
+                className="w-16 "
               />
               <div className="flex flex-col gap-3">
                 <h3 className="h4-bold text-dark-100">{achievement.label}</h3>
@@ -60,9 +63,9 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <div className="flex items-center my-16 gap-32">
+        <div className="md:flex items-center my-16 gap-32">
           <h2 className="h2-bold ">Our Achievements</h2>
-          <p className="px-7 text-light-600">
+          <p className="md:px-7 text-light-600">
             With six key achievements, including industry certifications and
             global partnerships, we continue to set new standards in granite
             manufacturing and export, ensuring quality and innovation in every
@@ -72,17 +75,19 @@ export default function Home() {
       </section>
       {/* partner section */}
 
-      <section className="px-28 bg-light-900 py-20">
-        <div className="flex items-center gap-12 justify-between">
-          <div className="w-1/2">
+      <section className="px-20 md:px-28 bg-light-900 py-20">
+        <div className="md:flex items-center gap-12 justify-between">
+          <div className="md:w-1/2">
             <h2 className="h2-bold text-dark-100">
               Manufacturing & Exporting to the premier
             </h2>
-            <p>From pioneering startups to industry-leading enterprises</p>
+            <p className="my-4 text-light-600">
+              From pioneering startups to industry-leading enterprises
+            </p>
           </div>
 
-          <div className="w-1/2 flex flex-col text-center gap-3">
-            <ul className=" grid gap-4 grid-cols-3">
+          <div className="md:w-1/2 flex flex-col text-center gap-3">
+            <ul className="max-md:mt-16 grid gap-4 grid-cols-3">
               {partnersLogo.map((logo) => (
                 <li
                   className="px-12 rounded-2xl py-4 bg-[#E7EBED] "
@@ -105,10 +110,10 @@ export default function Home() {
         </div>
       </section>
       {/* Why choose us */}
-      <section className="px-28 bg-[#E7EBED] py-20">
-        <div className="flex justify-between">
+      <section className="px-20 md:px-28 bg-[#E7EBED] py-20">
+        <div className="md:flex justify-between">
           {/* title section */}
-          <div className="flex flex-col gap-6">
+          <div className="flex md:flex-col gap-6">
             <h2 className="h2-bold">Why Choose Us ?</h2>
             <div className="flex items-center text-xs gap-2 font-semibold text-[#047C7C]">
               <div className="p-2 inline-block bg-[#047C7C] rounded-[100%]">
@@ -124,7 +129,7 @@ export default function Home() {
             </div>
           </div>
           {/* paragraph section */}
-          <div className="w-3/5">
+          <div className="max-md:py-4 md:w-3/5">
             <p className="text-light-600 text-md leading-7">
               With decades of expertise, a global footprint spanning [X]
               countries, and a steadfast commitment to quality, we deliver
@@ -135,9 +140,12 @@ export default function Home() {
           </div>
         </div>
 
-        <ul className="flex my-16 items-center gap-4">
+        <ul className="md:flex my-16 items-center gap-4">
           {choosingQualities.map((quality) => (
-            <li className="p-2 rounded-lg bg-light-900 w-full" key={quality.id}>
+            <li
+              className="p-2 max-md:my-4 rounded-lg bg-light-900 w-full"
+              key={quality.id}
+            >
               <Image
                 className="w-full h-52 rounded-lg object-cover"
                 src={quality.imgUrl}
@@ -156,26 +164,32 @@ export default function Home() {
         </ul>
       </section>
       {/* client section */}
-      <section className="px-28 bg-light-900 py-20">
+      <section className="px-20 md:px-28 bg-light-900 py-20">
         {/* map */}
-        <div className="flex items-center">
+        <div className="md:flex items-center">
           {/* heading container*/}
-          <div className="w-1/4">
+          <div className="md:w-1/4">
             <h2 className="h2-bold my-8 text-dark-100">
               Our Clients Across the World
             </h2>
-            <div className="flex my-4 items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
-              <h3 className="text-[48px] font-semibold text-dark-100">400+</h3>
-              <p className="font-medium text-light-600">Clients Worldwide</p>
-            </div>
-            <div className="flex my-4  items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
-              <h3 className="text-[48px] font-semibold text-dark-100">2000+</h3>
-              <p className="font-medium text-light-600">Satisfied Clients</p>
+            <div className="max-md:flex max-md:gap-3 max-md:justify-center">
+              <div className="md:flex my-4 items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
+                <h3 className="text-[48px] font-semibold text-dark-100">
+                  400+
+                </h3>
+                <p className="font-medium text-light-600">Clients Worldwide</p>
+              </div>
+              <div className="md:flex my-4  items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
+                <h3 className="text-[48px] font-semibold text-dark-100">
+                  2000+
+                </h3>
+                <p className="font-medium text-light-600">Satisfied Clients</p>
+              </div>
             </div>
           </div>
 
           {/* map container */}
-          <div className="w-3/4">
+          <div className="md:w-3/4">
             <Image
               className="w-full"
               src="/assets/images/map.jpeg"
@@ -187,11 +201,11 @@ export default function Home() {
         </div>
         {/* testimonials */}
         <div>
-          <div className="flex items-center gap-24">
-            <h2 className="w-2/5 h2-bold my-8 text-dark-100">
+          <div className="md:flex items-center gap-24">
+            <h2 className="md:w-2/5 h2-bold my-8 text-dark-100">
               What our Clients Say?
             </h2>
-            <p className="text-light-600 w-3/4">
+            <p className="text-light-600 md:w-3/4">
               Our clients are at the heart of everything we do, and their
               feedback speaks volumes about our commitment to excellence. Having
               served numerous customers globally, we are proud to showcase their
@@ -199,9 +213,12 @@ export default function Home() {
               service in granite manufacturing and export.
             </p>
           </div>
-          <ul className="flex gap-4">
+          <ul className="md:flex max-md:mt-8 gap-4">
             {testimonials.map((testimonial) => (
-              <li className="bg-[#E7EBED] rounded-lg p-6 " key={testimonial.id}>
+              <li
+                className="bg-[#E7EBED] max-md:my-4 rounded-lg p-6 "
+                key={testimonial.id}
+              >
                 <h3 className="text-[20px] font-bold text-dark-100">
                   {testimonial.name}
                 </h3>
