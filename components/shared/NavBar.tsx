@@ -38,7 +38,15 @@ const NavBar = () => {
       </ul>
 
       {/* catalogue button */}
-      <button>Catalogue</button>
+      <button className="py-2 px-4 gap-2 flex items-center cursor-pointer rounded-lg border">
+        Catalogue
+        <Image
+          src="/assets/icons/download.svg"
+          alt="download"
+          width={30}
+          height={30}
+        />
+      </button>
     </nav>
   );
 };
