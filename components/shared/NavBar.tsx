@@ -9,7 +9,11 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="absolute max-md:hidden text-light-900 px-28 w-full z-10 justify-between my-8 flex">
+    <nav
+      className={`absolute max-md:hidden  px-28 w-full z-10 justify-between my-8 flex ${
+        pathname === "/contact" ? "text-dark-100" : "text-light-900"
+      }`}
+    >
       {/* logo */}
 
       <Link className="flex items-center gap-4" href="/">
@@ -28,7 +32,11 @@ const NavBar = () => {
         {navLinks.map((link) => (
           <li
             className={`${
-              pathname === link.route ? "border-b-2 border-light-900" : ""
+              pathname === link.route && pathname === "/contact"
+                ? "border-b-2 border-dark-100 "
+                : pathname === link.route
+                ? "border-b-2 border-light-900"
+                : ""
             } px-8 max-xl:px-2    hover:border-b-2 hover:border-light-900 `}
             key={link.route}
           >
@@ -38,7 +46,11 @@ const NavBar = () => {
       </ul>
 
       {/* catalogue button */}
-      <button className="py-2 px-4 gap-2 flex items-center cursor-pointer rounded-lg border">
+      <button
+        className={`${
+          pathname === "/contact" ? "hidden" : ""
+        } py-2  px-4 gap-2 flex items-center cursor-pointer rounded-lg border`}
+      >
         Catalogue
         <Image
           src="/assets/icons/download.svg"
