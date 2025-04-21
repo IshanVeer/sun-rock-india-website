@@ -179,3 +179,35 @@ export const stepsToExcellence = [
       "At Sun India Rocks, our vision is to lead the granite industry with innovation, quality, and elegance. We aspire to create spaces where ",
   },
 ];
+export const manufacturingExcellence = [
+  {
+    id: 1,
+    name: "Years Of Industry Expertise",
+    imgUrl: "/assets/images/manufacturing-1.png",
+  },
+  {
+    id: 2,
+    name: "Stringent Quality Inspection Processes",
+    imgUrl: "/assets/images/manufacturing-2.png",
+  },
+  {
+    id: 3,
+    name: "In-house Manufacturing Capabilities",
+    imgUrl: "/assets/images/manufacturing-3.png",
+  },
+  {
+    id: 4,
+    name: "Eco-Friendly Manufacturing Processes",
+    imgUrl: "/assets/images/manufacturing-4.png",
+  },
+  {
+    id: 5,
+    name: "A Wide Assortment of Granite Products",
+    imgUrl: "/assets/images/manufacturing-5.png",
+  },
+  {
+    id: 6,
+    name: "State-of-The-Art Machinery",
+    imgUrl: "/assets/images/manufacturing-6.png",
+  },
+];

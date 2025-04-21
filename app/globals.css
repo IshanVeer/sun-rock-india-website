@@ -68,7 +68,7 @@
   }
 
   .h4-bold {
-    @apply text-[16px] font-bold leading-[100%];
+    @apply text-[16px] font-bold;
   }
 
   .base-regular {

@@ -1,7 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { excellence, stepsToExcellence } from "@/constants";
+import {
+  excellence,
+  manufacturingExcellence,
+  stepsToExcellence,
+} from "@/constants";
 
 const Page = () => {
   return (
@@ -169,6 +173,31 @@ const Page = () => {
             ))}
           </ul>
         </div>
+      </section>
+      {/* manufacturing section */}
+      <section className="px-20 md:px-28 items-center bg-[#E7EBED] py-20">
+        <h2 className="h2-bold   my-4 col-span-2  text-dark-100 md:hidden">
+          Excellence in Manufacturing & Export
+        </h2>
+        <ul className="grid grid-cols-4 gap-4 max-md:grid-cols-2 ">
+          <h2 className="h2-bold  mt-4 col-span-2  text-dark-100 max-md:hidden">
+            Excellence in Manufacturing & Export
+          </h2>
+          {manufacturingExcellence.map((manufacturing) => (
+            <li
+              className="bg-light-900 flex flex-col gap-3 rounded-xl h4-bold text-light-600 px-8 py-4"
+              key={manufacturing.id}
+            >
+              <Image
+                src={manufacturing.imgUrl}
+                alt={manufacturing.name}
+                height={100}
+                width={100}
+              />{" "}
+              <h3>{manufacturing.name}</h3>
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   );
