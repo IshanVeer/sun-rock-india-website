@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const Footer = () => {
   const pathname = usePathname();
   return (
-    <div className="px-28 py-8 mt-[48px] bg-dark-100 text-light-900">
+    <div className="px-20 md:px-28 py-8 mt-[48px] bg-dark-100 text-light-900">
       <div className="flex border-b-2 justify-between">
         {/* left container */}
         <div className="flex flex-col">
@@ -38,7 +38,7 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-          <div className="my-16 ">
+          <div className="my-8 md:my-16 ">
             <h3 className="h4-bold my-4">GET IN TOUCH</h3>
             <p className="w-2/3 mb-3 body-regular">
               Ut lobortis consequat varius. Nunc erit hendrerit urna . Ut lortis
@@ -63,19 +63,21 @@ const Footer = () => {
         </div>
         {/* right container */}
         <div>
-          <ul className="flex border-b gap-2 border-neutral-500">
+          <ul className="flex md:border-b gap-4 border-neutral-500">
             {navLinks.map((link) => (
               <li
                 className={`${
-                  pathname === link.route ? "border-b-2 border-light-900" : ""
-                } px-8   hover:border-b-2 hover:border-light-900 `}
+                  pathname === link.route
+                    ? "md:border-b-2 border-light-900"
+                    : ""
+                } md:px-8   md:hover:border-b-2 hover:border-light-900 `}
                 key={link.route}
               >
                 <Link href={link.route}>{link.label}</Link>
               </li>
             ))}
           </ul>
-          <div className="mt-[96px] flex justify-center gap-16">
+          <div className="mt-[76px] md:mt-[96px]  md:flex justify-center gap-16">
             <div>
               <h2 className="text-[14px] my-3 font-bold border-b-2 ">
                 Contact
