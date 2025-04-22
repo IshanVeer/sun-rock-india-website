@@ -190,10 +190,10 @@ export default function Home() {
           <div className="md:w-3/4">
             <Image
               className="w-full"
-              src="/assets/images/map.jpeg"
+              src="/assets/images/map.jpg"
               alt="map"
-              width={600}
-              height={600}
+              width={1000}
+              height={1000}
             />
           </div>
         </div>
