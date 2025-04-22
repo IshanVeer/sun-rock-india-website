@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <section className="px-20 md:px-28 bg-light-900 py-20 h-screen">
-      <div className="pt-30 flex items-center">
-        <div className="flex w-1/2 flex-col gap-6">
+    <section className="px-10 md:px-28 bg-light-900 py-20">
+      <div className="pt-30 sm:flex items-center">
+        <div className="flex sm:w-1/2 flex-col gap-6">
           <h1 className="h1-bold">Lets get in Touch</h1>
           <p>
             We’d love to hear from you! Reach out for any inquiries or project
@@ -25,7 +25,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 rounded-lg p-8 px-8 bg-[#E7EBED]">
+        <div className="sm:w-1/2 mt-8 rounded-lg p-8 px-8 bg-[#E7EBED]">
           <form className="flex  flex-col gap-8" action="submit">
             <div className="flex flex-col gap-2">
               {/* name */}

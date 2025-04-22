@@ -6,7 +6,7 @@ import Image from "next/image";
 const ProductShowcase = () => {
   const [selectedProduct, setSelectedProduct] = useState(productData[0]);
   return (
-    <div className="flex bg-[#E7EBED]  gap-12  items-center">
+    <div className="flex bg-[#E7EBED] max-sm:hidden  gap-12  items-center">
       {/* Sidebar */}
       <div className="flex flex-col text-light-600 gap-4 relative border-l border-gray-300 pl-8">
         {productData.map((product) => (
