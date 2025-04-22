@@ -55,7 +55,7 @@
 }
 @layer utilities {
   .h1-bold {
-    @apply text-[56px] max-md:text-5xl font-bold leading-[64px];
+    @apply text-[56px]  max-sm:text-3xl font-bold leading-[64px] max-sm:leading-[40px];
   }
   .h1-semibold {
     @apply text-[56px] font-semibold leading-[64px];

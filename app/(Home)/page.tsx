@@ -12,21 +12,22 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <section
-        className="object-cover px-20 md:px-28  h-[650px]"
+        className="object-cover px-10 md:px-28  h-[650px]"
         style={{ backgroundImage: "url('/assets/images/hero-image.png')" }}
       >
-        <div className="pt-48 w-[700px] max-md:w-[580px]">
+        <div className="pt-48 md:w-[700px] ">
           <h1 className=" text-light-900 h1-bold">
             Sun India Rocks is a Pioneering Company in
           </h1>
-          <p className="text-[18px] py-8 w-[640px] max-md:w-[520px] text-light-800">
+          <p className="text-[18px] py-8 md:w-[640px]  text-light-800">
             We specialize in granite manufacturing and export, delivering
             top-quality products to clients worldwide.{" "}
           </p>
-          <div className="flex gap-8">
-            <div className="bg-light-800 transition duration-150 hover:bg-light-700 font-medium inline-block px-4 py-2 rounded-lg">
+          <div className="flex max-sm:flex-col gap-8">
+            <div className="bg-light-800 transition duration-150 hover:bg-light-700 font-medium  w-max  px-4 py-2 rounded-lg">
               <Link href="/contact">Contact Us</Link>
             </div>
+
             <div className="flex hover:border-b-2 transition duration-150 border-light-900 font-medium items-center gap-3 text-light-900">
               <Link href="/products">See our Products</Link>
               <Image
@@ -40,11 +41,11 @@ export default function Home() {
         </div>
       </section>
       {/* Achievements Section */}
-      <section className="px-20 md:px-28 bg-[#E7EBED] py-20">
-        <ul className="grid max-md:grid-cols-2 max-md:gap-8 grid-cols-3 gap-12">
+      <section className="px-10 md:px-28 bg-[#E7EBED] py-20">
+        <ul className="sm:grid max-md:grid-cols-2 max-md:gap-8 grid-cols-3 gap-12">
           {achievements.map((achievement) => (
             <li
-              className="flex items-center max-md:items-start gap-4"
+              className="flex max-sm:my-8 items-center max-md:items-start gap-4"
               key={achievement.label}
             >
               <Image
@@ -54,7 +55,7 @@ export default function Home() {
                 width={40}
                 className="w-16 "
               />
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 max-sm:gap-1">
                 <h3 className="h4-bold text-dark-100">{achievement.label}</h3>
                 <p className="body-regular text-light-600">
                   {achievement.description}
@@ -75,7 +76,7 @@ export default function Home() {
       </section>
       {/* partner section */}
 
-      <section className="px-20 md:px-28 bg-light-900 py-20">
+      <section className="px-10 md:px-28 bg-light-900 py-20">
         <div className="md:flex items-center gap-12 justify-between">
           <div className="md:w-1/2">
             <h2 className="h2-bold text-dark-100">
@@ -87,10 +88,10 @@ export default function Home() {
           </div>
 
           <div className="md:w-1/2 flex flex-col text-center gap-3">
-            <ul className="max-md:mt-16 grid gap-4 grid-cols-3">
+            <ul className="max-md:mt-16 grid gap-4 grid-cols-3 max-sm:grid-cols-2">
               {partnersLogo.map((logo) => (
                 <li
-                  className="px-12 rounded-2xl py-4 bg-[#E7EBED] "
+                  className=" items-center px-12 max-sm:px-8 max-sm:py-2 rounded-2xl py-4 bg-[#E7EBED] "
                   key={logo.id}
                 >
                   <Image
@@ -110,15 +111,15 @@ export default function Home() {
         </div>
       </section>
       {/* Why choose us */}
-      <section className="px-20 md:px-28 bg-[#E7EBED] py-20">
+      <section className="px-10 md:px-28 bg-[#E7EBED] py-20">
         <div className="md:flex justify-between">
           {/* title section */}
-          <div className="flex md:flex-col gap-6">
+          <div className="flex flex-col gap-6">
             <h2 className="h2-bold">Why Choose Us ?</h2>
             <div className="flex items-center text-xs gap-2 font-semibold text-[#047C7C]">
               <div className="p-2 inline-block bg-[#047C7C] rounded-[100%]">
                 <Image
-                  className="bg-[##047C7C] rounded-[100%]"
+                  className="bg-[#047C7C] rounded-[100%]"
                   src="/assets/icons/chevron-right.svg"
                   alt="icon"
                   height={20}
@@ -164,7 +165,7 @@ export default function Home() {
         </ul>
       </section>
       {/* client section */}
-      <section className="px-20 md:px-28 bg-light-900 py-20">
+      <section className="px-10 md:px-28 bg-light-900 py-20">
         {/* map */}
         <div className="md:flex items-center">
           {/* heading container*/}
@@ -173,14 +174,14 @@ export default function Home() {
               Our Clients Across the World
             </h2>
             <div className="max-md:flex max-md:gap-3 max-md:justify-center">
-              <div className="md:flex my-4 items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
-                <h3 className="text-[48px] font-semibold text-dark-100">
+              <div className="sm:flex my-4 items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
+                <h3 className="text-[48px] max-sm:text-3xl font-semibold text-dark-100">
                   400+
                 </h3>
                 <p className="font-medium text-light-600">Clients Worldwide</p>
               </div>
-              <div className="md:flex my-4  items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
-                <h3 className="text-[48px] font-semibold text-dark-100">
+              <div className="sm:flex my-4  items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
+                <h3 className="text-[48px] max-sm:text-3xl font-semibold text-dark-100">
                   2000+
                 </h3>
                 <p className="font-medium text-light-600">Satisfied Clients</p>

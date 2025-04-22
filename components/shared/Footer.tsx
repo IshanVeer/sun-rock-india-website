@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation";
 const Footer = () => {
   const pathname = usePathname();
   return (
-    <div className="px-20 md:px-28 py-8  bg-dark-100 text-light-900">
-      <div className="flex border-b-2 justify-between">
+    <div className="px-10 md:px-28 py-8  bg-dark-100 text-light-900">
+      <div className="sm:flex border-b-2 justify-between">
         {/* left container */}
         <div className="flex flex-col">
           {/* logo */}
