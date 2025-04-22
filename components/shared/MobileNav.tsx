@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation";
 const MobileNav = () => {
   const pathname = usePathname();
   return (
-    <nav className="absolute md:hidden flex items-center justify-between px-20 my-8 text-light-900 w-full z-10">
+    <nav className="absolute md:hidden flex items-center justify-between px-10 my-8 text-light-900 w-full z-10">
       <Link className="flex items-center gap-4" href="/">
         <Image
           src="/assets/images/pexels-romanp-17845.jpg"

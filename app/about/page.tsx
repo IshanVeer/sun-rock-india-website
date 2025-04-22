@@ -12,21 +12,21 @@ const Page = () => {
     <div>
       {/* Hero Section */}
       <section
-        className="object-cover px-20 md:px-28  h-[650px]"
+        className="object-cover px-10 md:px-28  h-[650px]"
         style={{
           backgroundImage: "url('/assets/images/about-hero-image.png')",
         }}
       >
-        <div className="pt-48 w-[700px] max-md:w-[580px]">
+        <div className="pt-48 md:w-[700px] ">
           <h1 className=" text-light-900 h1-bold">
             Crafting Excellence, Shaping Dreams{" "}
           </h1>
-          <p className="text-[18px] py-8 w-[640px] max-md:w-[520px] text-light-800">
+          <p className="text-[18px] py-8 md:w-[640px]  text-light-800">
             Delivering premium granite solutions with a legacy of craftsmanship,
             innovation, and global trust.{" "}
           </p>
-          <div className="flex gap-8">
-            <div className="bg-light-800 transition duration-150 hover:bg-light-700 font-medium inline-block px-4 py-2 rounded-lg">
+          <div className="flex max-sm:flex-col gap-8">
+            <div className="bg-light-800 transition duration-150 hover:bg-light-700 font-medium inline-block w-max px-4 py-2 rounded-lg">
               <Link href="/contact">Contact Us</Link>
             </div>
             <div className="flex hover:border-b-2 transition duration-150 border-light-900 font-medium items-center gap-3 text-light-900">
@@ -42,7 +42,7 @@ const Page = () => {
         </div>
       </section>
       {/* our story */}
-      <section className="px-20 md:px-28 bg-light-900 py-20">
+      <section className="px-10 md:px-28 bg-light-900 py-20">
         <div>
           <div className="md:flex mt-8 mb-16 items-end gap-24">
             <h2 className="md:w-2/5 h2-bold max-md:mb-4  text-dark-100">
@@ -82,7 +82,7 @@ const Page = () => {
         </div>
       </section>
       {/* journey */}
-      <section className="px-20 md:px-28 bg-[#E7EBED] py-20">
+      <section className="px-10 md:px-28 bg-[#E7EBED] py-20">
         <div className="md:flex items-center gap-20 ">
           {/* content */}
           <div className="md:w-3/5">
@@ -141,7 +141,7 @@ const Page = () => {
         </div>
       </section>
       {/* steps to excellence */}
-      <section className="px-20 md:px-28 bg-light-900 py-20">
+      <section className="px-10 md:px-28 bg-light-900 py-20">
         <div className="md:flex items-center gap-20 justify-between">
           <div className="md:w-1/3">
             <h2 className="h2-bold text-dark-100">Our 4 Steps to Excellence</h2>
@@ -155,7 +155,7 @@ const Page = () => {
 
           <ul className="md:w-2/3 md:grid grid-cols-2 max-md:mt-8  gap-4">
             {stepsToExcellence.map((testimonial) => (
-              <li className=" max-md:my-4  " key={testimonial.id}>
+              <li className="max-sm:my-2 " key={testimonial.id}>
                 <Image
                   src={testimonial.imgUrl}
                   alt={testimonial.name}
@@ -175,17 +175,17 @@ const Page = () => {
         </div>
       </section>
       {/* manufacturing section */}
-      <section className="px-20 md:px-28 items-center bg-[#E7EBED] py-28">
+      <section className="px-10 md:px-28 items-center bg-[#E7EBED] py-28">
         <h2 className="h2-bold  my-4 col-span-2  text-dark-100 md:hidden">
           Excellence in Manufacturing & Export
         </h2>
-        <ul className="grid grid-cols-4 gap-4 max-md:grid-cols-2 ">
+        <ul className="md:grid grid-cols-4 gap-4  ">
           <h2 className="h2-bold  mt-4 col-span-2  text-dark-100 max-md:hidden">
             Excellence in Manufacturing & Export
           </h2>
           {manufacturingExcellence.map((manufacturing) => (
             <li
-              className="bg-light-900 flex flex-col gap-3 rounded-xl h4-bold text-light-600 px-8 py-4"
+              className="bg-light-900 max-sm:my-4 flex flex-col gap-3 rounded-xl h4-bold text-light-600 px-8 py-4"
               key={manufacturing.id}
             >
               <Image
@@ -193,6 +193,7 @@ const Page = () => {
                 alt={manufacturing.name}
                 height={100}
                 width={100}
+                className="max-sm:w-20"
               />{" "}
               <h3>{manufacturing.name}</h3>
             </li>
