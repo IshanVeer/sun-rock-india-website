@@ -11,10 +11,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section
-        className="object-cover px-10 md:px-28  h-[650px]"
-        style={{ backgroundImage: "url('/assets/images/hero-image.png')" }}
-      >
+      <section className="bg-[url('/assets/images/hero-image.png')] bg-cover bg-center px-10 md:px-28 h-[650px] ">
         <div className="pt-48 md:w-[700px] ">
           <h1 className=" text-light-900 h1-bold">
             Sun India Rocks is a Pioneering Company in

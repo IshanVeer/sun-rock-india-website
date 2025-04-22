@@ -7,12 +7,7 @@ const page = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section
-        className="object-cover px-10 md:px-28  h-[650px]"
-        style={{
-          backgroundImage: "url('/assets/images/product-hero-image.jpeg')",
-        }}
-      >
+      <section className="bg-[url('/assets/images/product-hero-image.jpeg')] bg-cover bg-center px-10 md:px-28 h-[650px] ">
         <div className="pt-48 md:w-[700px] ">
           <h1 className=" text-light-900 h1-bold">
             Discover our Granite Collection{" "}
