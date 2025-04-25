@@ -231,14 +231,16 @@ export const productData = [
   },
   {
     id: 3,
-    name: "3",
-    description: "description",
+    name: "Colonial White",
+    description:
+      "Colonial White is popular for countertops, backsplashes, and flooring — especially in kitchens and bathrooms — due to its clean, elegant appearance and subtle movement.",
     imgUrl: "/assets/images/3.png",
   },
   {
     id: 4,
-    name: "5",
-    description: "description",
+    name: "Italian White",
+    description:
+      "Italian White is a premium marble known for its elegant white base and soft gray veining, sourced from Italy. It’s prized for its timeless beauty, smooth finish, and luxurious appearance—commonly used in upscale interiors like countertops, flooring, and walls.",
     imgUrl: "/assets/images/5.png",
   },
   {
@@ -249,14 +251,16 @@ export const productData = [
   },
   {
     id: 6,
-    name: "12",
-    description: "description",
+    name: "Fusion Gold",
+    description:
+      "Fusion Gold Granite is a visually appealing granite stone from India. It is a south Indian granite and features a black background with golden-colored waves and veins. This black Indian granite is popular among architects and homeowners due to its dynamic design and enriched color palette.",
     imgUrl: "/assets/images/12.png",
   },
   {
     id: 7,
-    name: "14",
-    description: "description",
+    name: "Lavender Blue",
+    description:
+      "Lavender Blue Granite stands as a testament to the captivating beauty inherent in natural stone, combining aesthetic allure with enduring strength. This distinctive granite variety, renowned for its unique lavender to blue-gray hues, holds a special place in the realm of design, offering a timeless and sophisticated appeal.",
     imgUrl: "/assets/images/14.png",
   },
   {

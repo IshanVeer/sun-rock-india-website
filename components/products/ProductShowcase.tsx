@@ -9,7 +9,7 @@ const ProductShowcase = () => {
     <div className="flex bg-[#E7EBED] max-sm:hidden  gap-12  items-center">
       {/* Sidebar */}
       <div className="flex flex-col text-light-600 gap-4 relative border-l border-gray-300 pl-8">
-        {productData.map((product) => (
+        {productData.slice(0, 6).map((product) => (
           <button
             key={product.name}
             onClick={() => setSelectedProduct(product)}
@@ -43,10 +43,11 @@ const ProductShowcase = () => {
       {/* Right Panel */}
       <div className="bg-white p-8 rounded-2xl shadow-lg flex gap-8 items-start max-w-2xl">
         <Image
-          src="/assets/images/river-white.png"
+          src={selectedProduct.imgUrl}
           alt={selectedProduct.name}
           height={500}
           width={500}
+          className="w-1/2"
         />
         <div>
           <h2 className="text-2xl font-bold text-dark-100 mb-2">
