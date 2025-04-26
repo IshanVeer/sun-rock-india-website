@@ -5,11 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const page = () => {
   const MotionSection = motion.section;
   return (
     <div>
+      <Head>
+        {/* Preload critical images */}
+        <link
+          rel="preload"
+          href="/assets/images/product-hero-image.png"
+          as="image"
+        />
+        <link rel="preload" href="/assets/images/hero-image.png" as="image" />
+      </Head>
       {/* Hero Section */}
       <MotionSection
         initial={{ opacity: 0, y: 50 }}

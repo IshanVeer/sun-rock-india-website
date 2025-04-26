@@ -8,11 +8,20 @@ import {
   manufacturingExcellence,
   stepsToExcellence,
 } from "@/constants";
+import Head from "next/head";
 
 const Page = () => {
   const MotionSection = motion.section;
   return (
     <div>
+      <Head>
+        {/* Preload critical images */}
+        <link
+          rel="preload"
+          href="/assets/images/about-hero-image.png"
+          as="image"
+        />
+      </Head>
       {/* Hero Section */}
       <MotionSection
         initial={{ opacity: 0, y: 50 }}
