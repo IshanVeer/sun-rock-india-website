@@ -1,5 +1,6 @@
 import ProductShowcase from "@/components/products/ProductShowcase";
-import { buildData } from "@/constants";
+import { buildData, productData } from "@/constants";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -80,6 +81,36 @@ const page = () => {
       {/* product catalogue */}
       <section className="px-10  md:px-28 bg-[#E7EBED] py-20">
         <ProductShowcase />
+      </section>
+      <section className="px-10  md:px-28 bg-light-900 py-20">
+        <div className="flex items-center justify-between">
+          <h2 className="h2-bold text-dark-100">Showcase of Brilliance</h2>
+          <p className="my-4 text-light-600 w-2/3">
+            Explore our curated gallery of premium granite products, designed to
+            blend beauty and functionality. Each piece reflects our dedication
+            to quality and craftsmanship, offering timeless solutions for your
+            spaces.
+          </p>
+        </div>
+
+        <div className="grid my-8 grid-cols-4 auto-rows-[250px] gap-4 ">
+          {productData.map((product, index) => (
+            <Image
+              className={`w-full h-full object-cover rounded-md ${
+                index === 4 ? "col-span-2 row-span-2" : ""
+              }${
+                index === 5 || index === 6 || index === 7 || index === 8
+                  ? "col-span-1 row-span-2"
+                  : ""
+              } ${index === 11 ? "col-span-2 row-span-1" : ""}`}
+              key={product.id}
+              src={product.imgUrl}
+              alt={product.name}
+              height={1000}
+              width={1000}
+            />
+          ))}
+        </div>
       </section>
     </div>
   );

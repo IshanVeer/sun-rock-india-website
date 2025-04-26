@@ -371,10 +371,10 @@ export const productData = [
     description: "description",
     imgUrl: "/assets/images/47.png",
   },
-  {
-    id: 29,
-    name: "49",
-    description: "description",
-    imgUrl: "/assets/images/49.png",
-  },
+  // {
+  //   id: 29,
+  //   name: "49",
+  //   description: "description",
+  //   imgUrl: "/assets/images/49.png",
+  // },
 ];
