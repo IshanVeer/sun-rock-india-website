@@ -1,14 +1,23 @@
+"use client";
 import ProductShowcase from "@/components/products/ProductShowcase";
 import { buildData, productData } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const page = () => {
+  const MotionSection = motion.section;
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-[url('/assets/images/product-hero-image.jpeg')] bg-cover bg-center px-10 md:px-28 h-[650px] ">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="bg-[url('/assets/images/product-hero-image.jpeg')] bg-cover bg-center px-10 md:px-28 h-[650px] "
+      >
         <div className="pt-48 md:w-[700px] ">
           <h1 className=" text-light-900 h1-bold">
             Discover our Granite Collection{" "}
@@ -23,9 +32,15 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </MotionSection>
       {/* make your own */}
-      <section className="px-10 md:px-28 bg-light-900 py-20">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-10 md:px-28 bg-light-900 py-20"
+      >
         <div className="md:flex items-center gap-12 justify-between">
           <div className="md:w-1/2">
             <h2 className="h2-bold text-dark-100">Make your Own</h2>
@@ -50,9 +65,13 @@ const page = () => {
             </ul>
           </div>
         </div>
-      </section>
+      </MotionSection>
       {/* description */}
-      <section
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
         className="object-cover px-10 md:px-28  "
         style={{
           backgroundImage: "url('/assets/images/hero-image.png')",
@@ -77,12 +96,18 @@ const page = () => {
             appeal.{" "}
           </p>
         </div>
-      </section>
+      </MotionSection>
       {/* product catalogue */}
-      <section className="px-10  md:px-28 bg-[#E7EBED] py-20">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-10  md:px-28 bg-[#E7EBED] py-20"
+      >
         <ProductShowcase />
-      </section>
-      <section className="px-10  md:px-28 bg-light-900 py-20">
+      </MotionSection>
+      <MotionSection className="px-10  md:px-28 bg-light-900 py-20">
         <div className="flex items-center justify-between">
           <h2 className="h2-bold text-dark-100">Showcase of Brilliance</h2>
           <p className="my-4 text-light-600 w-2/3">
@@ -111,7 +136,7 @@ const page = () => {
             />
           ))}
         </div>
-      </section>
+      </MotionSection>
     </div>
   );
 };

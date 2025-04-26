@@ -1,9 +1,17 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const page = () => {
+  const MotionSection = motion.section;
   return (
-    <section className="px-10 md:px-28 bg-light-900 py-20">
+    <MotionSection
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="px-10 md:px-28 bg-light-900 py-20"
+    >
       <div className="pt-30 sm:flex items-center">
         <div className="flex sm:w-1/2 flex-col gap-6">
           <h1 className="h1-bold">Lets get in Touch</h1>
@@ -74,7 +82,7 @@ const page = () => {
           </form>
         </div>
       </div>
-    </section>
+    </MotionSection>
   );
 };
 

@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   excellence,
   manufacturingExcellence,
@@ -8,10 +10,17 @@ import {
 } from "@/constants";
 
 const Page = () => {
+  const MotionSection = motion.section;
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-[url('/assets/images/about-hero-image.png')] bg-cover bg-center px-10 md:px-28 h-[650px] ">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="bg-[url('/assets/images/about-hero-image.png')] bg-cover bg-center px-10 md:px-28 h-[650px] "
+      >
         <div className="pt-48 md:w-[700px] ">
           <h1 className=" text-light-900 h1-bold">
             Crafting Excellence, Shaping Dreams{" "}
@@ -35,9 +44,15 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </MotionSection>
       {/* our story */}
-      <section className="px-10 md:px-28 bg-light-900 py-20">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-10 md:px-28 bg-light-900 py-20"
+      >
         <div>
           <div className="md:flex mt-8 mb-16 items-end gap-24">
             <h2 className="md:w-2/5 h2-bold max-md:mb-4  text-dark-100">
@@ -75,9 +90,15 @@ const Page = () => {
             ))}
           </ul>
         </div>
-      </section>
+      </MotionSection>
       {/* journey */}
-      <section className="px-10 md:px-28 bg-[#E7EBED] py-20">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-10 md:px-28 bg-[#E7EBED] py-20"
+      >
         <div className="md:flex items-center gap-20 ">
           {/* content */}
           <div className="md:w-3/5">
@@ -134,9 +155,15 @@ const Page = () => {
             />
           </div>
         </div>
-      </section>
+      </MotionSection>
       {/* steps to excellence */}
-      <section className="px-10 md:px-28 bg-light-900 py-20">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-10 md:px-28 bg-light-900 py-20"
+      >
         <div className="md:flex items-center gap-20 justify-between">
           <div className="md:w-1/3">
             <h2 className="h2-bold text-dark-100">Our 4 Steps to Excellence</h2>
@@ -168,9 +195,15 @@ const Page = () => {
             ))}
           </ul>
         </div>
-      </section>
-      {/* manufacturing section */}
-      <section className="px-10 md:px-28 items-center bg-[#E7EBED] py-28">
+      </MotionSection>
+      {/* manufacturing MotionSection  */}
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-10 md:px-28 items-center bg-[#E7EBED] py-28"
+      >
         <h2 className="h2-bold  my-4 col-span-2  text-dark-100 md:hidden">
           Excellence in Manufacturing & Export
         </h2>
@@ -194,7 +227,7 @@ const Page = () => {
             </li>
           ))}
         </ul>
-      </section>
+      </MotionSection>
     </div>
   );
 };

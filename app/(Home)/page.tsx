@@ -1,3 +1,4 @@
+"use client";
 import {
   achievements,
   choosingQualities,
@@ -6,12 +7,20 @@ import {
 } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  const MotionSection = motion.section;
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-[url('/assets/images/hero-image.png')] bg-cover bg-center px-10 md:px-28 h-[650px] ">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="bg-[url('/assets/images/hero-image.png')] bg-cover bg-center px-10 md:px-28 h-[650px] "
+      >
         <div className="pt-48 md:w-[700px] ">
           <h1 className=" text-light-900 h1-bold">
             Sun India Rocks is a Pioneering Company in
@@ -36,9 +45,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </MotionSection>
       {/* Achievements Section */}
-      <section className="px-10 md:px-28 bg-[#E7EBED] py-20">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-10 md:px-28 bg-[#E7EBED] py-20"
+      >
         <ul className="sm:grid max-md:grid-cols-2 max-md:gap-8 grid-cols-3 gap-12">
           {achievements.map((achievement) => (
             <li
@@ -70,10 +85,16 @@ export default function Home() {
             project.
           </p>
         </div>
-      </section>
-      {/* partner section */}
+      </MotionSection>
+      {/* partner MotionSection */}
 
-      <section className="px-10 md:px-28 bg-light-900 py-20">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-10 md:px-28 bg-light-900 py-20"
+      >
         <div className="md:flex items-center gap-12 justify-between">
           <div className="md:w-1/2">
             <h2 className="h2-bold text-dark-100">
@@ -106,11 +127,17 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </MotionSection>
       {/* Why choose us */}
-      <section className="px-10 md:px-28 bg-[#E7EBED] py-20">
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-10 md:px-28 bg-[#E7EBED] py-20"
+      >
         <div className="md:flex justify-between">
-          {/* title section */}
+          {/* title MotionSection */}
           <div className="flex flex-col gap-6">
             <h2 className="h2-bold">Why Choose Us ?</h2>
             <div className="flex items-center text-xs gap-2 font-semibold text-[#047C7C]">
@@ -126,7 +153,7 @@ export default function Home() {
               <p>Know More</p>
             </div>
           </div>
-          {/* paragraph section */}
+          {/* paragraph MotionSection */}
           <div className="max-md:py-4 md:w-3/5">
             <p className="text-light-600 text-md leading-7">
               With decades of expertise, a global footprint spanning [X]
@@ -160,9 +187,15 @@ export default function Home() {
             </li>
           ))}
         </ul>
-      </section>
-      {/* client section */}
-      <section className="px-10 md:px-28 bg-light-900 py-20">
+      </MotionSection>
+      {/* client MotionSection */}
+      <MotionSection
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="px-10 md:px-28 bg-light-900 py-20"
+      >
         {/* map */}
         <div className="md:flex items-center">
           {/* heading container*/}
@@ -230,7 +263,7 @@ export default function Home() {
             ))}
           </ul>
         </div>
-      </section>
+      </MotionSection>
     </div>
   );
 }
