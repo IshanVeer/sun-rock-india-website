@@ -12,6 +12,40 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const MotionSection = motion.section;
+
+  // Animation variants for fade-in effect
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
+  // Staggered children animation for lists
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  // Item animation for list items
+  const item = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4 },
+    },
+  };
+
   return (
     <div>
       <Head>
@@ -19,7 +53,7 @@ export default function Home() {
         <link rel="preload" href="/assets/images/hero-image.png" as="image" />
         <link rel="preload" href="/assets/images/map.jpg" as="image" />
       </Head>
-      {/* Hero Section */}
+      {/* Hero Section - Keeping original animation */}
       <MotionSection
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -52,17 +86,25 @@ export default function Home() {
           </div>
         </div>
       </MotionSection>
+
       {/* Achievements Section */}
       <MotionSection
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
         className="px-10 md:px-28 bg-[#E7EBED] py-20"
       >
-        <ul className="sm:grid max-md:grid-cols-2 max-md:gap-8 grid-cols-3 gap-12">
+        <motion.ul
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="sm:grid max-md:grid-cols-2 max-md:gap-8 grid-cols-3 gap-12"
+        >
           {achievements.map((achievement) => (
-            <li
+            <motion.li
+              variants={item}
               className="flex max-sm:my-8 items-center max-md:items-start gap-4"
               key={achievement.label}
             >
@@ -79,10 +121,16 @@ export default function Home() {
                   {achievement.description}
                 </p>
               </div>
-            </li>
+            </motion.li>
           ))}
-        </ul>
-        <div className="md:flex items-center my-16 gap-32">
+        </motion.ul>
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="md:flex items-center my-16 gap-32"
+        >
           <h2 className="h2-bold ">Our Achievements</h2>
           <p className="md:px-7 text-light-600">
             With six key achievements, including industry certifications and
@@ -90,18 +138,24 @@ export default function Home() {
             manufacturing and export, ensuring quality and innovation in every
             project.
           </p>
-        </div>
+        </motion.div>
       </MotionSection>
-      {/* partner MotionSection */}
 
+      {/* Partners Section */}
       <MotionSection
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
         className="px-10 md:px-28 bg-light-900 py-20"
       >
-        <div className="md:flex items-center gap-12 justify-between">
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="md:flex items-center gap-12 justify-between"
+        >
           <div className="md:w-1/2">
             <h2 className="h2-bold text-dark-100">
               Manufacturing & Exporting to the premier
@@ -112,9 +166,16 @@ export default function Home() {
           </div>
 
           <div className="md:w-1/2 flex flex-col text-center gap-3">
-            <ul className="max-md:mt-16 grid gap-4 grid-cols-3 max-sm:grid-cols-2">
+            <motion.ul
+              variants={container}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="max-md:mt-16 grid gap-4 grid-cols-3 max-sm:grid-cols-2"
+            >
               {partnersLogo.map((logo) => (
-                <li
+                <motion.li
+                  variants={item}
                   className=" items-center px-12 max-sm:px-8 max-sm:py-2 rounded-2xl py-4 bg-[#E7EBED] "
                   key={logo.id}
                 >
@@ -125,25 +186,32 @@ export default function Home() {
                     width={40}
                     height={40}
                   />
-                </li>
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
             <p className="body-regular text-light-600">
               And many more to come...
             </p>
           </div>
-        </div>
+        </motion.div>
       </MotionSection>
-      {/* Why choose us */}
+
+      {/* Why Choose Us Section */}
       <MotionSection
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
         className="px-10 md:px-28 bg-[#E7EBED] py-20"
       >
-        <div className="md:flex justify-between">
-          {/* title MotionSection */}
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="md:flex justify-between"
+        >
+          {/* title section */}
           <div className="flex flex-col gap-6">
             <h2 className="h2-bold">Why Choose Us ?</h2>
             <div className="flex items-center text-xs gap-2 font-semibold text-[#047C7C]">
@@ -159,7 +227,7 @@ export default function Home() {
               <p>Know More</p>
             </div>
           </div>
-          {/* paragraph MotionSection */}
+          {/* paragraph section */}
           <div className="max-md:py-4 md:w-3/5">
             <p className="text-light-600 text-md leading-7">
               With decades of expertise, a global footprint spanning [X]
@@ -169,11 +237,18 @@ export default function Home() {
               logistics make us the trusted partner for projects of any scale.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <ul className="md:flex my-16 items-center gap-4">
+        <motion.ul
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="md:flex my-16 items-center gap-4"
+        >
           {choosingQualities.map((quality) => (
-            <li
+            <motion.li
+              variants={item}
               className="p-2 max-md:my-4 rounded-lg bg-light-900 w-full"
               key={quality.id}
             >
@@ -190,43 +265,68 @@ export default function Home() {
               <p className="paragraph-regular text-light-600 mx-2 mb-4">
                 {quality.description}
               </p>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </MotionSection>
-      {/* client MotionSection */}
+
+      {/* Client Section */}
       <MotionSection
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
         className="px-10 md:px-28 bg-light-900 py-20"
       >
         {/* map */}
-        <div className="md:flex items-center">
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="md:flex items-center"
+        >
           {/* heading container*/}
           <div className="md:w-1/4">
             <h2 className="h2-bold my-8 text-dark-100">
               Our Clients Across the World
             </h2>
             <div className="max-md:flex max-md:gap-3 max-md:justify-center">
-              <div className="sm:flex my-4 items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="sm:flex my-4 items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-"
+              >
                 <h3 className="text-[48px] max-sm:text-3xl font-semibold text-dark-100">
                   400+
                 </h3>
                 <p className="font-medium text-light-600">Clients Worldwide</p>
-              </div>
-              <div className="sm:flex my-4  items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="sm:flex my-4  items-center bg-[#E7EBED] gap-6 px-6 py-3 rounded-md bg-"
+              >
                 <h3 className="text-[48px] max-sm:text-3xl font-semibold text-dark-100">
                   2000+
                 </h3>
                 <p className="font-medium text-light-600">Satisfied Clients</p>
-              </div>
+              </motion.div>
             </div>
           </div>
 
           {/* map container */}
-          <div className="md:w-3/4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="md:w-3/4"
+          >
             <Image
               className="w-full"
               src="/assets/images/map.jpg"
@@ -234,11 +334,18 @@ export default function Home() {
               width={1000}
               height={1000}
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
+
         {/* testimonials */}
         <div>
-          <div className="md:flex items-center gap-24">
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="md:flex items-center gap-24"
+          >
             <h2 className="md:w-2/5 h2-bold my-8 text-dark-100">
               What our Clients Say?
             </h2>
@@ -249,10 +356,18 @@ export default function Home() {
               reviews, highlighting our quality, reliability, and exceptional
               service in granite manufacturing and export.
             </p>
-          </div>
-          <ul className="md:flex max-md:mt-8 gap-4">
+          </motion.div>
+
+          <motion.ul
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="md:flex max-md:mt-8 gap-4"
+          >
             {testimonials.map((testimonial) => (
-              <li
+              <motion.li
+                variants={item}
                 className="bg-[#E7EBED] max-md:my-4 rounded-lg p-6 "
                 key={testimonial.id}
               >
@@ -265,9 +380,9 @@ export default function Home() {
                 <p className="base-regular text-light-600 my-4 leading-6">
                   {testimonial.description}
                 </p>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </MotionSection>
     </div>
