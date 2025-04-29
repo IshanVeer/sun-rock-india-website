@@ -9,6 +9,7 @@ import Head from "next/head";
 
 const page = () => {
   const MotionSection = motion.section;
+  const MotionDiv = motion.div;
   return (
     <div>
       <Head>
@@ -128,7 +129,13 @@ const page = () => {
           </p>
         </div>
 
-        <div className="grid my-8 grid-cols-4 auto-rows-[250px] gap-4 ">
+        <MotionDiv
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="grid my-8 grid-cols-4 auto-rows-[250px] gap-4 "
+        >
           {productData.map((product, index) => (
             <Image
               className={`w-full h-full object-cover rounded-md ${
@@ -145,7 +152,7 @@ const page = () => {
               width={1000}
             />
           ))}
-        </div>
+        </MotionDiv>
       </MotionSection>
     </div>
   );
