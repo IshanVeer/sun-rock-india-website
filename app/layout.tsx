@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Jost, Kumbh_Sans } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/shared/NavBar";
 import Footer from "@/components/shared/Footer";
 import MobileNav from "@/components/shared/MobileNav";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const jost = Jost({
+  variable: "--font-jost",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+const kumbhSans = Kumbh_Sans({
+  variable: "--font-kumbhSans",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
@@ -24,8 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${poppins.variable} antialiased`}>
-        <NavBar />
+      <body className={`${kumbhSans.variable} ${jost.variable} antialiased`}>
+        {/* <NavBar /> */}
         <MobileNav />
         <main>{children}</main>
         <Footer />
