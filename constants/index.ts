@@ -378,3 +378,8 @@ export const productData = [
   //   imgUrl: "/assets/images/49.png",
   // },
 ];
+export const profilePictures = [
+  { id: 1, name: "image-1", imgUrl: "/assets/images/profile-1.jpg" },
+  { id: 2, name: "image-2", imgUrl: "/assets/images/profile-2.jpg" },
+  { id: 3, name: "image-3", imgUrl: "/assets/images/profile-3.jpg" },
+];

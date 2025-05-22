@@ -6,7 +6,7 @@ import { navLinks, socialLinks } from "@/constants";
 
 const Footer = () => {
   return (
-    <div className="px-10  md:px-16 py-20 flex justify-between items-start bg-primary-500 text-white">
+    <footer className="px-10 relative overflow-hidden  md:px-16 py-20 flex justify-between items-start bg-primary-500 text-white">
       {/* info container */}
       <div className="flex w-1/4 flex-col gap-16">
         <h1 className="title-font uppercase h1-light font-light">
@@ -51,12 +51,12 @@ const Footer = () => {
         </div>
       </div>
       {/* Logo */}
-      <div className="">
-        <h1 className="title-font absolute top-32  -right-12 text-[400px] font-semibold">
+      <div className="relative">
+        <h1 className="title-font absolute top-10 -right-28 text-[400px] font-semibold z-0">
           S
         </h1>
       </div>
-    </div>
+    </footer>
   );
 };
 
