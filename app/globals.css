@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary-500: #004745;
+  --color-primary-500: #004739;
   --color-red-500: #ea5555;
   --color-red-700: #ff9898;
   --color-dark-100: #00193e;
@@ -24,16 +24,22 @@
     font-family: "Jost", sans-serif;
   }
   .h1-bold {
-    @apply text-[56px]  max-sm:text-3xl font-bold leading-[64px] max-sm:leading-[40px];
+    @apply text-[55px]  max-sm:text-3xl font-bold leading-[64px] max-sm:leading-[40px];
+  }
+  .h1-light {
+    @apply text-[55px]  max-sm:text-3xl font-light leading-[64px] max-sm:leading-[40px];
   }
   .h1-semibold {
-    @apply text-[56px] font-semibold leading-[64px];
+    @apply text-[55px] font-semibold leading-[64px];
   }
   .h2-bold {
     @apply text-[36px] font-bold leading-[40px];
   }
   .h3-bold {
     @apply text-[20px] font-bold leading-[100%];
+  }
+  .h3-regular {
+    @apply text-[20px] font-normal leading-[100%];
   }
 
   .h4-bold {
