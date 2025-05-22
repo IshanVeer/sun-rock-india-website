@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  --color-primary-300: #1a594d;
   --color-primary-500: #004739;
   --color-red-500: #ea5555;
   --color-red-700: #ff9898;
@@ -32,11 +33,17 @@
   .h1-semibold {
     @apply text-[55px] font-semibold leading-[64px];
   }
+  .h1-medium {
+    @apply text-[55px] font-medium leading-[64px];
+  }
   .h2-bold {
     @apply text-[36px] font-bold leading-[40px];
   }
   .h3-bold {
     @apply text-[20px] font-bold leading-[100%];
+  }
+  .h3-medium {
+    @apply text-[20px] font-medium leading-[100%];
   }
   .h3-regular {
     @apply text-[20px] font-normal leading-[100%];

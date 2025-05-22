@@ -10,7 +10,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`absolute max-md:hidden  px-28 w-full z-10 justify-between my-8 flex ${
+      className={`absolute max-md:hidden  px-24 w-full z-10 justify-between my-8 flex ${
         pathname === "/contact" ? "text-dark-100" : "text-light-900"
       }`}
     >
@@ -28,7 +28,7 @@ const NavBar = () => {
       </Link>
 
       {/* navbar */}
-      <ul className="flex border-b gap-2 border-neutral-500">
+      <ul className="flex h3-medium gap-2 ">
         {navLinks.map((link) => (
           <li
             className={`${
@@ -37,7 +37,7 @@ const NavBar = () => {
                 : pathname === link.route
                 ? "border-b-2 border-light-900"
                 : ""
-            } px-8 max-xl:px-2    hover:border-b-2 hover:border-light-900 `}
+            } px-6 py-3 max-xl:px-2    hover:border-b-2 hover:border-light-900 `}
             key={link.route}
           >
             <Link href={link.route}>{link.label}</Link>
@@ -48,10 +48,16 @@ const NavBar = () => {
       {/* catalogue button */}
       <button
         className={`${
-          pathname === "/contact" ? "hidden" : ""
-        } py-2  px-4 gap-2 flex items-center cursor-pointer rounded-lg border`}
+          pathname === "/contact"
+            ? "bg-black text-white"
+            : pathname === "/"
+            ? "bg-neutral-800"
+            : pathname === "/about"
+            ? "bg-primary-500"
+            : ""
+        } py-1.5 uppercase title-font  px-5 gap-2 flex items-center cursor-pointer `}
       >
-        Catalogue
+        View Catalogue
         <Image
           src="/assets/icons/download.svg"
           alt="download"

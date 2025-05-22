@@ -6,7 +6,7 @@ import { navLinks, socialLinks } from "@/constants";
 
 const Footer = () => {
   return (
-    <div className="px-10 sticky bottom-0 md:px-16 py-20 flex justify-between items-start bg-primary-500 text-white">
+    <div className="px-10  md:px-16 py-20 flex justify-between items-start bg-primary-500 text-white">
       {/* info container */}
       <div className="flex w-1/4 flex-col gap-16">
         <h1 className="title-font uppercase h1-light font-light">

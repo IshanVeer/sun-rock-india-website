@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${kumbhSans.variable} ${jost.variable} antialiased`}>
-        {/* <NavBar /> */}
+        <NavBar />
         <MobileNav />
         <main>{children}</main>
         <Footer />
