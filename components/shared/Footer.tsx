@@ -28,7 +28,7 @@ const Footer = () => {
           <h2 className="title-font text-2xl font-normal uppercase">
             Quick Links
           </h2>
-          <ul className="flex flex-col gap-4 h3-regular">
+          <ul className="flex title-font flex-col gap-4 h3-regular">
             {navLinks.map((link) => (
               <li key={link.route}>
                 <Link href={link.route}>{link.label}</Link>
@@ -41,7 +41,7 @@ const Footer = () => {
           <h2 className="title-font text-2xl font-normal uppercase">
             Social Links
           </h2>
-          <ul className="flex capitalize flex-col gap-4 h3-regular">
+          <ul className="flex title-font capitalize flex-col gap-4 h3-regular">
             {socialLinks.map((link) => (
               <li key={link.route}>
                 <Link href={link.route}>{link.label}</Link>
