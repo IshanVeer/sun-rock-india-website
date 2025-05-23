@@ -6,6 +6,7 @@ import {
   profilePictures,
   testimonials,
 } from "@/constants";
+import { div } from "framer-motion/client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -114,6 +115,65 @@ export default function Home() {
               className="w-1/2 h-3/5 object-cover"
             />
           </div>
+        </div>
+      </section>
+      {/* Spiral positioned absolutely behind both sections */}
+      <Image
+        src="/assets/images/Spiral.svg"
+        alt="spiral-vector"
+        height={100}
+        width={100}
+        className="absolute top-[1900px] left-[40px] w-1/5 -z-10 opacity-60"
+      />
+
+      {/* Achievements Section */}
+      <section className="relative px-8 md:px-20 pb-28">
+        <h2 className="title-font uppercase font-light text-[55px] leading-16">
+          Our achievements
+        </h2>
+        <div className="flex gap-44">
+          <div className="w-1/4">{/* optional decorative content */}</div>
+
+          <div>
+            <h3 className="title-font font-semibold uppercase text-[#696868]">
+              Certificates
+            </h3>
+            {achievements.map((achievement) => (
+              <div
+                className="text-2xl flex py-10 border-b-2 border-[#B9B6B6] items-start gap-8"
+                key={achievement.id}
+              >
+                <p className="w-1/4 capitalize">{achievement.label}</p>
+                <p className="w-3/4 capitalize">{achievement.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Product Section */}
+      <section className="relative bg-[url('/assets/images/home-product-image-1.jpg')] bg-cover bg-center px-8 h-[650px] z-10 md:px-20 pb-28">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/30 to-transparent"></div>
+        <div className="absolute top-1/2 w-1/3">
+          <h2 className="title-font mb-10 text-7xl text-white">Black Galaxy</h2>
+          <p className="text-white mb-4 text-[20px] line-clamp-2">
+            A luxurious black granite with golden and silver specks. A sleek,
+            solid black granite known for its elegance. Rich brown with dark
+            speckles, ideal for countertops. A unique granite with blue tones
+            and intricate patterns.
+          </p>
+          <Link
+            className="inline-flex px-5 py-2 hover:bg-primary-300 transition duration-150  bg-primary-500 text-white gap-2 justify-center items-center"
+            href="/products"
+          >
+            <p>Learn More</p>{" "}
+            <Image
+              src="/assets/icons/chevron-right.svg"
+              alt="right"
+              height={20}
+              width={20}
+            />
+          </Link>
         </div>
       </section>
     </>
