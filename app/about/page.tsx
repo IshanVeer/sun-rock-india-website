@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { excellence } from "@/constants";
-import { div } from "framer-motion/client";
 
 const Page = () => {
   return (
