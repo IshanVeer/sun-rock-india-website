@@ -2,7 +2,6 @@
 import {
   achievements,
   blogsData,
-  choosingQualities,
   partnersLogo,
   productData,
   profilePictures,
@@ -25,7 +24,7 @@ import {
 
 import Image from "next/image";
 import Link from "next/link";
-import { div } from "framer-motion/client";
+
 import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -62,8 +61,8 @@ export default function Home() {
                     <Image
                       src={img.imgUrl}
                       alt={img.name}
-                      height={1000}
-                      width={1000}
+                      height={500}
+                      width={500}
                       className="w-12 h-12 border-2 border-yellow-200 object-cover rounded-[100%]"
                     />{" "}
                   </div>
@@ -282,7 +281,7 @@ export default function Home() {
               height={1000}
               width={1000}
               alt="dawn"
-              className="w-1/2 absolute top-75 z-10 left-0"
+              className="w-1/2 absolute top-80 z-10 left-0"
             />
           </div>
           <div className="w-[60%]">
@@ -298,12 +297,23 @@ export default function Home() {
                 {testimonials.map((testimonial) => (
                   <CarouselItem key={testimonial.id}>
                     <p className="text-4xl  title-font">{`"${testimonial.description}"`}</p>
-                    <p className="title-font mt-8 uppercase font-semibold">
-                      {testimonial.name}
-                    </p>
-                    <p className="title-font font-semibold text-[#B9B6B6]">
-                      {testimonial.designation}
-                    </p>
+                    <div className="flex mt-8 items-center gap-4">
+                      <Image
+                        src={testimonial.profilePicture}
+                        width={500}
+                        height={500}
+                        alt={testimonial.name}
+                        className="w-16 h-16 object-cover rounded-full"
+                      />
+                      <div>
+                        <p className="title-font  uppercase font-semibold">
+                          {testimonial.name}
+                        </p>
+                        <p className="title-font font-semibold text-[#B9B6B6]">
+                          {testimonial.designation}
+                        </p>
+                      </div>
+                    </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>

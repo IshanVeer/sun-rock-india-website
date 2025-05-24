@@ -77,6 +77,7 @@ export const testimonials = [
     id: 1,
     name: "sunil waman",
     designation: "Builder",
+    profilePicture: "/assets/images/profile-1.jpg",
     description:
       "Exceptional quality and service! The granite was delivered on time and exceeded our expectations in every way. Highly recommend!",
   },
@@ -84,6 +85,7 @@ export const testimonials = [
     id: 2,
     name: "Name Surname",
     designation: "designation",
+    profilePicture: "/assets/images/profile-1.jpg",
     description:
       "Exceptional quality and service! The granite was delivered on time and exceeded our expectations in every way. Highly recommend!",
   },
@@ -91,6 +93,7 @@ export const testimonials = [
     id: 3,
     name: "Name Surname",
     designation: "designation",
+    profilePicture: "/assets/images/profile-1.jpg",
     description:
       "Exceptional quality and service! The granite was delivered on time and exceeded our expectations in every way. Highly recommend!",
   },
