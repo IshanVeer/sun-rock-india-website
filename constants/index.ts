@@ -231,159 +231,42 @@ export const productData = [
     name: "river white",
     description:
       "River White Granite resembles a flowing river with soft white tones and black granule-like spots, creating a natural, dynamic pattern. Its unique aesthetic and strength make it perfect for countertops, flooring, and statement pieces.",
-    imgUrl: "/assets/images/river-white.png",
+    imgUrl: "/assets/images/product-image-1.jpg",
   },
   {
-    id: 3,
+    id: 2,
     name: "Colonial White",
     description:
       "Colonial White is popular for countertops, backsplashes, and flooring — especially in kitchens and bathrooms — due to its clean, elegant appearance and subtle movement.",
-    imgUrl: "/assets/images/3.png",
+    imgUrl: "/assets/images/product-image-2.jpg",
   },
   {
-    id: 4,
+    id: 3,
     name: "Italian White",
     description:
       "Italian White is a premium marble known for its elegant white base and soft gray veining, sourced from Italy. It’s prized for its timeless beauty, smooth finish, and luxurious appearance—commonly used in upscale interiors like countertops, flooring, and walls.",
-    imgUrl: "/assets/images/5.png",
+    imgUrl: "/assets/images/product-image-3.jpg",
   },
-  {
-    id: 5,
-    name: "9",
-    description: "description",
-    imgUrl: "/assets/images/9.png",
-  },
-  {
-    id: 6,
-    name: "Fusion Gold",
-    description:
-      "Fusion Gold Granite is a visually appealing granite stone from India. It is a south Indian granite and features a black background with golden-colored waves and veins. This black Indian granite is popular among architects and homeowners due to its dynamic design and enriched color palette.",
-    imgUrl: "/assets/images/12.png",
-  },
-  {
-    id: 7,
-    name: "Lavender Blue",
-    description:
-      "Lavender Blue Granite stands as a testament to the captivating beauty inherent in natural stone, combining aesthetic allure with enduring strength. This distinctive granite variety, renowned for its unique lavender to blue-gray hues, holds a special place in the realm of design, offering a timeless and sophisticated appeal.",
-    imgUrl: "/assets/images/14.png",
-  },
-  {
-    id: 8,
-    name: "16",
-    description: "description",
-    imgUrl: "/assets/images/16.png",
-  },
-  {
-    id: 9,
-    name: "18",
-    description: "description",
-    imgUrl: "/assets/images/18.png",
-  },
-  {
-    id: 10,
-    name: "19",
-    description: "description",
-    imgUrl: "/assets/images/19.png",
-  },
-  {
-    id: 12,
-    name: "20",
-    description: "description",
-    imgUrl: "/assets/images/20.png",
-  },
-  {
-    id: 13,
-    name: "21",
-    description: "description",
-    imgUrl: "/assets/images/21.png",
-  },
-  {
-    id: 14,
-    name: "23",
-    description: "description",
-    imgUrl: "/assets/images/23.png",
-  },
-  {
-    id: 15,
-    name: "26",
-    description: "description",
-    imgUrl: "/assets/images/26.png",
-  },
-  {
-    id: 16,
-    name: "28",
-    description: "description",
-    imgUrl: "/assets/images/28.png",
-  },
-  {
-    id: 17,
-    name: "30",
-    description: "description",
-    imgUrl: "/assets/images/30.png",
-  },
-  {
-    id: 18,
-    name: "31",
-    description: "description",
-    imgUrl: "/assets/images/31.png",
-  },
-  {
-    id: 19,
-    name: "33",
-    description: "description",
-    imgUrl: "/assets/images/33.png",
-  },
-  {
-    id: 20,
-    name: "35",
-    description: "description",
-    imgUrl: "/assets/images/35.png",
-  },
-  {
-    id: 21,
-    name: "37",
-    description: "description",
-    imgUrl: "/assets/images/37.png",
-  },
-  {
-    id: 24,
-    name: "41",
-    description: "description",
-    imgUrl: "/assets/images/41.png",
-  },
-  {
-    id: 25,
-    name: "43",
-    description: "description",
-    imgUrl: "/assets/images/43.png",
-  },
-  {
-    id: 26,
-    name: "44",
-    description: "description",
-    imgUrl: "/assets/images/44.png",
-  },
-  {
-    id: 27,
-    name: "46",
-    description: "description",
-    imgUrl: "/assets/images/46.png",
-  },
-  {
-    id: 28,
-    name: "47",
-    description: "description",
-    imgUrl: "/assets/images/47.png",
-  },
-  // {
-  //   id: 29,
-  //   name: "49",
-  //   description: "description",
-  //   imgUrl: "/assets/images/49.png",
-  // },
 ];
 export const profilePictures = [
   { id: 1, name: "image-1", imgUrl: "/assets/images/profile-1.jpg" },
   { id: 2, name: "image-2", imgUrl: "/assets/images/profile-2.jpg" },
   { id: 3, name: "image-3", imgUrl: "/assets/images/profile-3.jpg" },
+];
+export const whyChooseUsQue = [
+  {
+    id: "1",
+    title: "High Quality Granite",
+    description: "We use the finest materials for lasting strength and beauty.",
+  },
+  {
+    id: "2",
+    title: "Global Export Experience",
+    description: "We use the finest materials for lasting strength and beauty.",
+  },
+  {
+    id: "3",
+    title: "Decades of Expertise",
+    description: "We use the finest materials for lasting strength and beauty.",
+  },
 ];

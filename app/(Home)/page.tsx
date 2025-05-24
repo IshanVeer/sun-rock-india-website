@@ -3,10 +3,17 @@ import {
   achievements,
   choosingQualities,
   partnersLogo,
+  productData,
   profilePictures,
   testimonials,
+  whyChooseUsQue,
 } from "@/constants";
-import { div } from "framer-motion/client";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -152,28 +159,99 @@ export default function Home() {
       </section>
 
       {/* Product Section */}
-      <section className="relative bg-[url('/assets/images/home-product-image-1.jpg')] bg-cover bg-center px-8 h-[650px] z-10 md:px-20 pb-28">
+      <section className="relative overflow-hidden  bg-[url('/assets/images/home-product-image-1.jpg')] bg-cover bg-center px-8 h-[650px] z-10 md:px-20 pb-28">
         <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/30 to-transparent"></div>
-        <div className="absolute top-1/2 w-1/3">
-          <h2 className="title-font mb-10 text-7xl text-white">Black Galaxy</h2>
-          <p className="text-white mb-4 text-[20px] line-clamp-2">
-            A luxurious black granite with golden and silver specks. A sleek,
-            solid black granite known for its elegance. Rich brown with dark
-            speckles, ideal for countertops. A unique granite with blue tones
-            and intricate patterns.
-          </p>
-          <Link
-            className="inline-flex px-5 py-2 hover:bg-primary-300 transition duration-150  bg-primary-500 text-white gap-2 justify-center items-center"
-            href="/products"
-          >
-            <p>Learn More</p>{" "}
+        <div className="flex absolute top-1/3 gap-24">
+          <div className="w-1/3">
+            <h2 className="title-font mb-10 text-7xl text-white">
+              Black Galaxy
+            </h2>
+            <p className="text-white mb-4 text-[20px] line-clamp-2">
+              A luxurious black granite with golden and silver specks. A sleek,
+              solid black granite known for its elegance. Rich brown with dark
+              speckles, ideal for countertops. A unique granite with blue tones
+              and intricate patterns.
+            </p>
+            <Link
+              className="inline-flex px-5 py-2 hover:bg-primary-300 transition duration-150  bg-primary-500 text-white gap-2 justify-center items-center"
+              href="/products"
+            >
+              <p>Learn More</p>{" "}
+              <Image
+                src="/assets/icons/chevron-right.svg"
+                alt="right"
+                height={20}
+                width={20}
+              />
+            </Link>
+          </div>
+          <div className=" py-2 h-60  flex gap-4 ">
+            {productData.map((product) => (
+              <Image
+                key={product.id}
+                src={product.imgUrl}
+                height={300}
+                width={400}
+                alt={product.name}
+                className="w-full border-4 border-white"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* why choose us section */}
+      <section className="md:px-20 py-28">
+        <div className="flex gap-16">
+          {/* text conatianer */}
+          <div className="w-[37.5%] ">
+            <h2 className="title-font mb-20 uppercase font-light text-[55px] leading-16">
+              Why Choose Sun Rock India?
+            </h2>
+            <p className="text-[20px] leading-8 mt-36 mb-6">
+              With years of experience and a passion for perfection, we deliver
+              premium stone solutions tailored to your vision.
+            </p>
+            <Link
+              className="inline-flex px-5 py-2 hover:bg-primary-300 transition duration-150  bg-primary-500 text-white gap-2 justify-center items-center"
+              href="/products"
+            >
+              <p>Know More</p>{" "}
+              <Image
+                src="/assets/icons/chevron-right.svg"
+                alt="right"
+                height={20}
+                width={20}
+              />
+            </Link>
+          </div>
+          <div className="w-[25%]">
             <Image
-              src="/assets/icons/chevron-right.svg"
-              alt="right"
-              height={20}
-              width={20}
+              src="/assets/images/why-choose-us.jpg"
+              alt="why-choose-us"
+              height={1000}
+              width={1000}
+              className="object-cover w-full h-full"
             />
-          </Link>
+          </div>
+
+          <div className="w-[37.5%] ">
+            <Accordion type="single" collapsible>
+              {whyChooseUsQue.map((que) => (
+                <AccordionItem
+                  className="hover:none"
+                  key={que.id}
+                  value={que.id}
+                >
+                  <AccordionTrigger className="uppercase hover:cursor-pointer title-font text-[28px] font-normal items-center">
+                    {que.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[20px]">
+                    {que.description}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </section>
     </>
