@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { excellence } from "@/constants";
+import { div } from "framer-motion/client";
 
 const Page = () => {
   return (
@@ -133,6 +135,66 @@ const Page = () => {
               Delivery
             </li>
           </ul>
+        </div>
+      </section>
+      {/* mission section */}
+      <section className="md:px-20 py-28">
+        <div className="flex items-center h-[623px] gap-18">
+          {/* text conatianer */}
+          <div className="w-[55%] ">
+            <Link
+              className="inline-flex px-5 py-2 text-[20px] uppercase hover:bg-primary-300 transition duration-150  bg-primary-500 text-white gap-2 justify-center items-center"
+              href="/products"
+            >
+              <p>Mission</p>{" "}
+            </Link>
+            <h2 className="title-font my-4  uppercase font-light text-[45px] leading-16">
+              Crafting enduring beauty through natural stone.
+            </h2>
+            <p className="text-[20px]  leading-8  mb-6">
+              We aim to deliver premium-quality stone solutions that blend
+              timeless elegance with lasting durability, enhancing spaces across
+              India and beyond.
+            </p>
+          </div>
+          <div className="w-[45%] h-full">
+            <Image
+              src="/assets/images/why-choose-us.jpg"
+              alt="why-choose-us"
+              height={1000}
+              width={1000}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+      </section>
+      {/* manufacturing excellence section */}
+      <section className="md:px-20 pb-28">
+        <div className="text-center">
+          <h2 className="title-font uppercase text-[55px] font-light">
+            Excellence in Manufacturing & Export
+          </h2>
+        </div>
+        <div className="grid grid-cols-3 gap-8">
+          {excellence.map((exc) => (
+            <div
+              className="flex flex-col gap-4 p-8 border-r text-center"
+              key={exc.id}
+            >
+              <div className="bg-primary-500  p-6 rounded-[20px]">
+                <div className="w-[100px] h-[100px]">
+                  <Image
+                    src={exc.imgUrl}
+                    alt={exc.name}
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <p className="text-[28px]">{exc.name}</p>
+            </div>
+          ))}
         </div>
       </section>
     </div>

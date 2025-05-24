@@ -135,24 +135,33 @@ export const socialLinks = [
 export const excellence = [
   {
     id: 1,
-    name: "Mission",
-    imgUrl: "/assets/icons/mission.svg",
-    description:
-      "Sun India Rocks is dedicated to delivering premium granite sourced from our quarries and trusted partners. We prioritize quality, innovation, and trust, striving to set new industry standards and build lasting client relationships.",
+    name: "Years Of Industry Expertise",
+    imgUrl: "/assets/icons/excellence-1.svg",
   },
   {
     id: 2,
-    name: "Vision",
-    imgUrl: "/assets/icons/eye.png",
-    description:
-      "At Sun India Rocks, our vision is to lead the granite industry with innovation, quality, and elegance. We aspire to create spaces where beauty meets functionality, enriching lives with materials that reflect excellence and harmony.",
+    name: "Stringent Quality ",
+    imgUrl: "/assets/icons/excellence-2.svg",
   },
   {
     id: 3,
-    name: "Excellence",
-    imgUrl: "/assets/icons/excellence.png",
-    description:
-      "Excellence is central to Sun India Rocks. Driven by quality, integrity, and transparency, we consistently surpass expectations. Our experienced team and industry accolades reinforce our position as a leader in granite solutions, creating exceptional value for our clients and employees.",
+    name: "In-house Manufacturing Capabilities",
+    imgUrl: "/assets/icons/excellence-3.svg",
+  },
+  {
+    id: 4,
+    name: "Eco-Friendly Manufacturing Processes",
+    imgUrl: "/assets/icons/excellence-4.svg",
+  },
+  {
+    id: 5,
+    name: "A Wide Assortment of Granite Products",
+    imgUrl: "/assets/icons/excellence-5.svg",
+  },
+  {
+    id: 6,
+    name: "State-of-The-Art Machinery",
+    imgUrl: "/assets/icons/excellence-1.svg",
   },
 ];
 
