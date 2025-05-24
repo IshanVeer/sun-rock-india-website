@@ -24,6 +24,7 @@ import {
 
 import Image from "next/image";
 import Link from "next/link";
+import { div } from "framer-motion/client";
 
 export default function Home() {
   return (
@@ -310,6 +311,45 @@ export default function Home() {
               </div>
             </Carousel>
           </div>
+        </div>
+      </section>
+      {/* map section */}
+      <section className="md:px-20 py-28">
+        <div className="flex justify-between">
+          <div className="title-font">
+            <h3 className="text-[55px] font-light">250+</h3>
+            <p className="text-[20px]">Projects Successfully Delivered</p>
+          </div>
+          <div className="title-font">
+            <h3 className="text-[55px] font-light">99%</h3>
+            <p className="text-[20px]">On-Time Delivery Rate</p>
+          </div>
+          <div className="title-font">
+            <h3 className="text-[55px] font-light">10+</h3>
+            <p className="text-[20px]">Years of Industry Experience</p>
+          </div>
+        </div>
+        <div>
+          <Image
+            src="/assets/images/map.jpg"
+            alt="map"
+            height={2000}
+            width={2000}
+            className="w-full"
+          />
+        </div>
+        <div className="flex items-center justify-between">
+          {partnersLogo.map((logo) => (
+            <div key={logo.id}>
+              <Image
+                className="w-full"
+                height={500}
+                width={500}
+                alt="logo"
+                src={logo.imgUrl}
+              />
+            </div>
+          ))}
         </div>
       </section>
     </>
