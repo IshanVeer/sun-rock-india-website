@@ -1,6 +1,7 @@
 "use client";
 import {
   achievements,
+  blogsData,
   choosingQualities,
   partnersLogo,
   productData,
@@ -25,6 +26,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { div } from "framer-motion/client";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -351,6 +353,50 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+      {/* journal section */}
+      <section>
+        <div className="flex md:px-20 items-center justify-between">
+          <h2 className="text-[55px] w-1/2 font-light uppercase">
+            The Sun Rock Journal
+          </h2>
+          <Link
+            className="inline-flex px-5 py-2 hover:bg-primary-300 transition duration-150  bg-primary-500 text-white gap-2 justify-center items-center"
+            href="/products"
+          >
+            <p>Know More</p>{" "}
+            <Image
+              src="/assets/icons/chevron-right.svg"
+              alt="right"
+              height={20}
+              width={20}
+            />
+          </Link>
+        </div>
+        <ul className="flex px-6 pb-28 pt-12  gap-4">
+          {blogsData.map((blog, index) => (
+            <li
+              key={blog.id}
+              className={cn(
+                "w-full pb-18 bg-[#F2F2F2]",
+                index % 2 === 1 ? "h-[300px]" : "h-[400px]" // Change as needed
+              )}
+            >
+              <Link href="/">
+                <Image
+                  src={blog.imgUrl}
+                  height={1000}
+                  width={1000}
+                  alt={blog.title}
+                  className="w-full h-full object-cover"
+                />
+                <p className="text-[20px] title-font capitalize px-2 pt-2">
+                  {blog.title}
+                </p>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
     </>
   );

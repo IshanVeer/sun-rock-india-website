@@ -270,3 +270,26 @@ export const whyChooseUsQue = [
     description: "We use the finest materials for lasting strength and beauty.",
   },
 ];
+
+export const blogsData = [
+  {
+    id: 1,
+    title: "Choosing the Right Stone for Your Space",
+    imgUrl: "/assets/images/journal-image-1.jpg",
+  },
+  {
+    id: 2,
+    title: "5 Ways Stone Can Transform Your Interiors",
+    imgUrl: "/assets/images/journal-image-2.jpg",
+  },
+  {
+    id: 3,
+    title: "The Sustainability of Natural Stone and care tips",
+    imgUrl: "/assets/images/journal-image-3.jpg",
+  },
+  {
+    id: 4,
+    title: "How to Maintain Natural Stone Surfaces",
+    imgUrl: "/assets/images/journal-image-4.jpg",
+  },
+];
