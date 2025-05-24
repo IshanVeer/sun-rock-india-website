@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Page = () => {
   return (
-    <div className="relative">
+    <div>
       {/* Hero Section */}
       <section className="relative h-[650px] px-10 md:px-20 overflow-hidden">
         {/* Background Image and Overlay */}
@@ -40,7 +40,7 @@ const Page = () => {
           <p className="text-[20px]">Satisfied Clients</p>
         </div>
       </div>
-      <section className="flex px-8 md:px-20 py-28">
+      <section className="flex px-8 md:px-20 pt-28 pb-48">
         <p className="absolute uppercase -translate-y-1/2 origin-left left-12 rotate-90 title-font font-semibold text-[#696868]">
           . About Us
         </p>
@@ -74,6 +74,65 @@ const Page = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      {/* Steps to excellence */}
+      <section className="bg-primary-500 md:px-16 py-28">
+        <div className="text-center">
+          <h3 className="text-[45px] text-white font-light title-font uppercase">
+            Our 4 Steps to Excellence
+          </h3>
+        </div>
+        <div className="flex mt-12 mb-4 gap-8">
+          <div className="flex w-[80%] h-[485px] gap-18 items-center bg-white">
+            <video
+              className="w-1/2 h-full object-cover"
+              autoPlay
+              muted
+              playsInline
+            >
+              <source
+                src="/assets/videos/steps-to-excellence-manufacturing.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <div className="w-1/2">
+              <h2 className="text-4xl  mb-12 uppercase title-font ">
+                Precision Manufacturing for Lasting Quality
+              </h2>
+              <p className="text-[20px]">
+                We aim to deliver premium-quality stone solutions that blend
+                timeless elegance with lasting durability, enhancing spaces
+                across India and beyond.
+              </p>
+            </div>
+          </div>
+          <div className="w-[20%]">
+            <video className=" h-full object-cover" autoPlay muted playsInline>
+              <source
+                src="/assets/videos/steps-to-excellence-2.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div className="border-t-4 py-4 mt-16">
+          <ul className="text-white flex justify-between items-center">
+            <li className="text-[20px] font-semibold title-font uppercase">
+              Manufacturing
+            </li>
+            <li className="text-[20px] font-semibold title-font uppercase">
+              Quality
+            </li>
+            <li className="text-[20px] font-semibold title-font uppercase">
+              packing
+            </li>
+            <li className="text-[20px] font-semibold title-font uppercase">
+              Delivery
+            </li>
+          </ul>
         </div>
       </section>
     </div>
