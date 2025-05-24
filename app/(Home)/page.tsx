@@ -14,6 +14,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -251,6 +258,57 @@ export default function Home() {
                 </AccordionItem>
               ))}
             </Accordion>
+          </div>
+        </div>
+      </section>
+      {/* Testimonials section */}
+      <section className="md:px-20 pb-28">
+        <div className="flex justify-between">
+          <div className="bg-primary-500 relative w-[40%] text-white -ml-20 -mb-28 pl-20">
+            <div className="absolute top-1/4">
+              <p className=" font-semibold uppercase title-font">
+                . Testimonials
+              </p>
+              <h2 className="text-[55px] z-50 title-font font-light uppercase">
+                Stonework Stories from Our Clients
+              </h2>
+            </div>
+
+            <Image
+              src="/assets/images/Dawn.svg"
+              height={1000}
+              width={1000}
+              alt="dawn"
+              className="w-1/2 absolute top-75 z-10 left-0"
+            />
+          </div>
+          <div className="w-[60%]">
+            <Image
+              src="/assets/images/testimonials-quotes.svg"
+              alt="quote"
+              height={300}
+              width={300}
+              className="w-1/12"
+            />
+            <Carousel className="mt-12">
+              <CarouselContent>
+                {testimonials.map((testimonial) => (
+                  <CarouselItem key={testimonial.id}>
+                    <p className="text-4xl  title-font">{`"${testimonial.description}"`}</p>
+                    <p className="title-font mt-8 uppercase font-semibold">
+                      {testimonial.name}
+                    </p>
+                    <p className="title-font font-semibold text-[#B9B6B6]">
+                      {testimonial.designation}
+                    </p>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex mt-12 gap-4 justify-end">
+                <CarouselPrevious className="bg-primary-500 size-16 text-white cursor-pointer hover:text-white hover:bg-primary-300" />
+                <CarouselNext className="bg-primary-500 text-white size-16 hover:text-white cursor-pointer hover:bg-primary-300" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>

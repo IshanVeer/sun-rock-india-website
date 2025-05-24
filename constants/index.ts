@@ -75,8 +75,8 @@ export const choosingQualities = [
 export const testimonials = [
   {
     id: 1,
-    name: "Name Surname",
-    designation: "designation",
+    name: "sunil waman",
+    designation: "Builder",
     description:
       "Exceptional quality and service! The granite was delivered on time and exceeded our expectations in every way. Highly recommend!",
   },
