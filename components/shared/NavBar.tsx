@@ -11,7 +11,9 @@ const NavBar = () => {
   return (
     <nav
       className={`absolute max-md:hidden  px-20 w-full z-10 justify-between my-8 flex ${
-        pathname === "/contact" ? "text-dark-100" : "text-light-900"
+        pathname === "/contact"
+          ? "bg-white static text-dark-100"
+          : "text-light-900"
       }`}
     >
       {/* logo */}

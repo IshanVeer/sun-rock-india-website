@@ -1,88 +1,140 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+
 const page = () => {
-  const MotionSection = motion.section;
   return (
-    <MotionSection
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-      className="px-10 md:px-28 bg-light-900 py-20"
-    >
-      <div className="pt-30 sm:flex items-center">
-        <div className="flex sm:w-1/2 flex-col gap-6">
-          <h1 className="h1-bold">Lets get in Touch</h1>
-          <p>
+    <>
+      <section className="bg-primary-500 flex">
+        {/* image contaienr */}
+        <div className="w-1/2">
+          <Image
+            src="/assets/images/contact-hero-image.jpg"
+            alt="contatc-hero"
+            height={1000}
+            width={1000}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        {/* text-container */}
+        <div className="w-1/2 py-32  text-center">
+          <h1 className="text-[75px] title-font text-white capitalize">
+            Lets get in Touch
+          </h1>
+          <p className="text-[20px] w-3/4 mx-auto text-white capitalize">
             We’d love to hear from you! Reach out for any inquiries or project
-            assistance, and let’s discuss how Sun India Rocks can provide the
-            perfect granite solutions for your needs.
+            assistance.
           </p>
-          <div className="flex">
-            <Image
-              src="/assets/icons/phone.svg"
-              alt="call"
-              height={50}
-              width={50}
-            />
-            <div>
-              <p>+91 65478 29364</p>
-              <p>sunindiarocks@gmail.com</p>
+          <div className="flex flex-col mx-auto w-1/2 mt-12 gap-6 ">
+            <div className="flex gap-6  items-center">
+              <div className="bg-white rounded-full p-4">
+                <Image
+                  src="/assets/icons/phone.svg"
+                  alt="phone"
+                  height={30}
+                  width={30}
+                />
+              </div>
+
+              <p className="text-[20px] text-white">+91 65478 29364</p>
+            </div>
+            <div className="flex gap-6  items-center">
+              <div className="bg-white rounded-full p-4">
+                <Image
+                  src="/assets/icons/mail.svg"
+                  alt="phone"
+                  height={30}
+                  width={30}
+                />
+              </div>
+
+              <p className="text-[20px] text-white">sunindiarocks@gmail.com</p>
             </div>
           </div>
         </div>
-        <div className="sm:w-1/2 mt-8 rounded-lg p-8 px-8 bg-[#E7EBED]">
-          <form className="flex  flex-col gap-8" action="submit">
-            <div className="flex flex-col gap-2">
+      </section>
+      {/* form section */}
+      <section className="flex">
+        {/* form container */}
+        <div className="w-1/2 py-32 px-12  text-center">
+          <h1 className="text-[55px] title-font uppercase">have a question?</h1>
+          <p className="text-[20px] w-3/4 mx-auto text-white capitalize">
+            We’d love to hear from you! Reach out for any inquiries or project
+            assistance.
+          </p>
+          <form action="submit">
+            <div className="grid grid-cols-2 gap-12">
               {/* name */}
-              <label className="text-dark-100 h4-bold" htmlFor="name">
-                Name
-              </label>
-              <input
-                className="w-full rounded-md p-1.5 bg-light-900"
-                id="name"
-                type="text"
-              />
+              <div className="flex flex-col items-start">
+                <label className="text-2xl" htmlFor="name">
+                  Name
+                </label>
+                <input
+                  className="border-b-2 border-[#B9B6B6] w-full focus:outline-none focus:ring-0"
+                  id="name"
+                  type="text"
+                />
+              </div>
+              {/* email */}
+              <div className="flex flex-col items-start">
+                <label className="text-2xl" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  className="border-b-2 border-[#B9B6B6] w-full focus:outline-none focus:ring-0"
+                  id="email"
+                  type="email"
+                />
+              </div>
+              {/* phone */}
+              <div className="flex flex-col items-start">
+                <label className="text-2xl" htmlFor="phone">
+                  Phone Number
+                </label>
+                <input
+                  className="border-b-2 border-[#B9B6B6] w-full focus:outline-none focus:ring-0"
+                  id="phone"
+                  type="number"
+                />
+              </div>
+              {/* Country */}
+              <div className="flex flex-col items-start">
+                <label className="text-2xl" htmlFor="country">
+                  Country
+                </label>
+                <input
+                  className="border-b-2 border-[#B9B6B6] w-full focus:outline-none focus:ring-0"
+                  id="country"
+                  type="text"
+                />
+              </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <label className="h4-bold text-dark-100" htmlFor="number">
-                Phone Number
+            <div></div>
+            {/* inquiry */}
+            <div className="flex py-12 flex-col items-start">
+              <label className="text-2xl" htmlFor="inquiry">
+                Inquiry Message
               </label>
-              <input
-                id="number"
-                className="w-full rounded-md p-1.5 bg-light-900"
-                type="number"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="h4-bold  text-dark-100" htmlFor="email">
-                Email
-              </label>
-              <input
-                className="w-full rounded-md p-1.5 bg-light-900"
-                id="email"
-                type="email"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="h4-bold  text-dark-100" htmlFor="message">
-                Message
-              </label>{" "}
               <textarea
-                className="w-full rounded-md bg-light-900"
-                rows={4}
-                id="message"
+                className="border-b-2 h-30 border-[#B9B6B6] w-full focus:outline-none focus:ring-0"
+                id="inquiry"
+                name="inquiry"
               />
             </div>
-            <button className="bg-[#047C7C] rounded-md text-light-900 h4-bold w-full px-4 py-2">
-              Contact Us
-            </button>
           </form>
         </div>
-      </div>
-    </MotionSection>
+        {/* image contaienr */}
+        <div className="w-1/2">
+          <Image
+            src="/assets/images/contact-hero-image.jpg"
+            alt="contatc-hero"
+            height={1000}
+            width={1000}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+    </>
   );
 };
 
