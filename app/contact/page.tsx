@@ -126,7 +126,7 @@ const page = () => {
         {/* image contaienr */}
         <div className="w-1/2">
           <Image
-            src="/assets/images/contact-hero-image.jpg"
+            src="/assets/images/contact-form-image.jpg"
             alt="contatc-hero"
             height={1000}
             width={1000}
