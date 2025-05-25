@@ -56,7 +56,7 @@ const page = () => {
       {/* form section */}
       <section className="flex">
         {/* form container */}
-        <div className="w-1/2 py-32 px-12  text-center">
+        <div className="w-1/2 py-32 px-20  text-center">
           <h1 className="text-[55px] title-font uppercase">have a question?</h1>
           <p className="text-[20px] w-3/4 mx-auto text-white capitalize">
             We’d love to hear from you! Reach out for any inquiries or project
@@ -132,6 +132,14 @@ const page = () => {
             width={1000}
             className="w-full h-full object-cover"
           />
+        </div>
+      </section>
+      {/* Frequently asked questions section */}
+      <section className="py-28 md:px-20">
+        <div className="text-center">
+          <h2 className="title-font text-[55px] font-light uppercase">
+            Frequently asked questions
+          </h2>
         </div>
       </section>
     </>
